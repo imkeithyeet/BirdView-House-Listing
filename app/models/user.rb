@@ -1,0 +1,6 @@
+class User < ApplicationRecord
+    has_many :homes 
+    has_many :offers 
+    has_many :offered_homes, through: :offers, class_name:"Home"
+    # has_one :watchlist
+end
