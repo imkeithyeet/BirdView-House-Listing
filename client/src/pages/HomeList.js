@@ -4,34 +4,33 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
 
-function RecipeList() {
-  const [recipes, setRecipes] = useState([]);
+function HomeList() {
+  const [homes, setHomes] = useState([]);
 
   useEffect(() => {
-    fetch("/recipes")
+    fetch("/homes")
       .then((r) => r.json())
-      .then(setRecipes);
+      .then(setHomes);
   }, []);
 
   return (
     <Wrapper>
-      {recipes.length > 0 ? (
-        recipes.map((recipe) => (
-          <Recipe key={recipe.id}>
+      {homes.length > 0 ? (
+        homes.map((home) => (
+          <Recipe key={home.id}>
             <Box>
-              <h2>{recipe.title}</h2>
-              <p>
-                <em>Time to Complete: {recipe.minutes_to_complete} minutes</em>
-                &nbsp;·&nbsp;
-                <cite>By {recipe.user.username}</cite>
-              </p>
-              <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
+              <img
+                src={home.photos.map((photo) => photo.image_url)}
+                alt={home.bio}
+              />
+              <cite>By {home.user.email}</cite>
+              <ReactMarkdown>{home.bio}</ReactMarkdown>
             </Box>
           </Recipe>
         ))
       ) : (
         <>
-          <h2>No Recipes Found</h2>
+          <h2>No Homes Found</h2>
           <Button as={Link} to="/new">
             Make a New Recipe
           </Button>
@@ -50,4 +49,4 @@ const Recipe = styled.article`
   margin-bottom: 24px;
 `;
 
-export default RecipeList;
+export default HomeList;
