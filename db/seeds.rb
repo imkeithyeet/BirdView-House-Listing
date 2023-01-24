@@ -46,14 +46,14 @@ p8 = Photo.create(image_url: 'https://admin.azbigmedia.com/wp-content/uploads/20
 
 
 puts "Seeding offers..."
-o1 = Offer.create(user: u4, home: h4)
-o2 = Offer.create(user: u2, home: h3)
-o3 = Offer.create(user: u5, home: h1)
-o4 = Offer.create(user: u8, home: h4)
-o5 = Offer.create(user: u7, home: h5)
-o6 = Offer.create(user: u6, home: h6)
-o7 = Offer.create(user: u3, home: h7)
-o8 = Offer.create(user: u1, home: h1)
+o1 = Offer.create(user: u4, home: h4, amount: 200000)
+o2 = Offer.create(user: u2, home: h3, amount: 200000)
+o3 = Offer.create(user: u5, home: h1, amount: 500000)
+o4 = Offer.create(user: u8, home: h4, amount: 400000)
+o5 = Offer.create(user: u7, home: h5, amount: 25000000)
+o6 = Offer.create(user: u6, home: h6, amount: 3000000)
+o7 = Offer.create(user: u3, home: h7, amount: 100000)
+o8 = Offer.create(user: u1, home: h1, amount: 7000000)
 
 
 
