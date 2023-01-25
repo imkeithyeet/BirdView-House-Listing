@@ -36,7 +36,8 @@ const ButtonBase = styled.button`
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 8px 16px;
-  text-decoration: none;
+  text-decoration:shadow;
+
 `;
 
 const FillButton = styled(ButtonBase)`
