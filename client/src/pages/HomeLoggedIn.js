@@ -37,7 +37,18 @@ function HomeLoggedIn({ user }) {
           </Button>
         </>
       )} */}
-      <h2>{user.homes.map((home) => home.address)}</h2>
+      <h1>Homes for Sale: </h1>
+            <div>
+            {user.homes.map((home) => (
+            <div>
+              <img
+                src={home.photos && home.photos.map((photo) => photo.image_url)}
+                alt={home.bio}
+              />
+              <li>{home.address}</li>
+              </div>
+            ))}
+            </div>
     </Wrapper>
   );
 }

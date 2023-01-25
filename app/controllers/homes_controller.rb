@@ -11,7 +11,8 @@ class HomesController < ApplicationController
     end
 
     def create
-
+        home = @current_user.homes.create!(house_params)
+        render json: home, status: :created
     end
 
     private

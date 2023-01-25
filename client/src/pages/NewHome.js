@@ -22,8 +22,8 @@ function NewHome({ user }) {
       },
       body: JSON.stringify({
         address,
-        bio,
-        minutes_to_complete: price,
+        price,
+        bio
       }),
     }).then((r) => {
       setIsLoading(false);

@@ -4,7 +4,11 @@ function Dashboard({ user }) {
     return (
         <>
         <h1>Homes for Sale: </h1>
-        <h2>{user.homes.map((home) => home.address)}</h2>
+            <div>
+            {user.homes.map((home) => (
+            <li>{home.address}</li>
+            ))}
+            </div>
         <h2>Sell your Home: </h2>
         <NewHome user={user} />
         </>
