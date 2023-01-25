@@ -9,8 +9,7 @@ function Login({ onLogin }) {
 
   return (
     <Wrapper>
-      <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" } 
-      
+      <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
       </Logo>
       {showLogin ? (
         <>
