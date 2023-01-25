@@ -6,6 +6,9 @@ import Login from "../pages/Login";
 import HomeList from "../pages/HomeList";
 import NewHome from "../pages/NewHome";
 import About from "../pages/About";
+import Contact from "../pages/Contact";
+
+
 
 
 
@@ -33,6 +36,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login onLogin={setUser} />
+            </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/">
             <HomeList />

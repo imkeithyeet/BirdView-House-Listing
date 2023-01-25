@@ -25,6 +25,9 @@ function NavBar({ user, setUser }) {
       <Button as={Link} to="/about">
           About 
         </Button>
+        <Button as={Link} to="/contact">
+          Contact 
+        </Button>
         <Button as={Link} to="/login">
           Login/Signup
         </Button>
@@ -44,7 +47,7 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
-  color: white;
+  color: black;
   margin: 0;
   line-height: 1;
 
