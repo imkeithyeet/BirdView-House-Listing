@@ -7,7 +7,7 @@ import HomeList from "../pages/HomeList";
 import NewHome from "../pages/NewHome";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-
+import HomeLoggedIn from "../pages/HomeLoggedIn";
 
 
 
@@ -57,11 +57,14 @@ function App() {
           <Route path="/new">
             <NewHome user={user} />
           </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/">
-            <HomeList />
+            <HomeLoggedIn user={user} />
           </Route>
         </Switch>
       </main>
