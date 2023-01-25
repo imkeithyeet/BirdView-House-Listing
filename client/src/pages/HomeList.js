@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { Box, Button } from "../styles";
 import "../styles/HomeList.css"
 
+
+
 function HomeList() {
   const [homes, setHomes] = useState([]);
 

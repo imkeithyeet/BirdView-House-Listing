@@ -19,7 +19,7 @@ function NavBar({ user, setUser }) {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">Birdview</Link>
+        <Link to="/">BirdView</Link>
       </Logo>
       <Nav>
       <Button as={Link} to="/about">
@@ -46,7 +46,7 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: Chunkfive, sans;
   font-size: 3rem;
-  color: black;
+  color: CadetBlue	;
   margin: 0;
   line-height: 1;
 
