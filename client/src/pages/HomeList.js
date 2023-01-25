@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
 
+
+
 function HomeList() {
   const [homes, setHomes] = useState([]);
 
@@ -23,7 +25,8 @@ function HomeList() {
                 src={home.photos.map((photo) => photo.image_url)}
                 alt={home.bio}
               />
-              <cite>By {home.user.email}</cite>
+              <cite> By {home.user.email}
+              </cite>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
             </Box>
           </Recipe>
@@ -32,7 +35,7 @@ function HomeList() {
         <>
           <h2>No Homes Found</h2>
           <Button as={Link} to="/new">
-            Make a New Recipe
+            List a new Home
           </Button>
         </>
       )}

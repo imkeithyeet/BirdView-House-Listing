@@ -12,14 +12,14 @@ Home.destroy_all
 Offer.destroy_all
 
 puts "Seeding users..."
-u1 = User.create(email: 'Caitlin@gmail.com', password: "1234")
-u2 = User.create(email: 'Lizzie@yahoo.com', password:"ilovechicken")
-u3 = User.create(email: 'Tom@hotmail.com', password:"dragonslayer")
-u4 = User.create(email: 'Morgan@gmail.com',password:"master")
-u5 = User.create(email: 'Danny@gmail.com', password:"420")
-u6 = User.create(email: 'Peter@gmail.com', password:"sub")
-u7 = User.create(email: 'Amanda@gmail.com', password:"hello")
-u8 = User.create(email: 'Nick@gmail.com', password:"morgan")
+u1 = User.create(username:"caitlinhouse", email: 'Caitlin@gmail.com', password: "1234")
+u2 = User.create(username:"dreamfront", email: 'Lizzie@yahoo.com', password:"ilovechicken")
+u3 = User.create(username:"hopes", email: 'Tom@hotmail.com', password:"dragonslayer")
+u4 = User.create(username: "immorganyeet", email: 'Morgan@gmail.com',password:"master")
+u5 = User.create(username:"dannydevito", email: 'Danny@gmail.com', password:"420")
+u6 = User.create(username: "familyhome", email: 'Peter@gmail.com', password:"sub")
+u7 = User.create(username: "bynes", email: 'Amanda@gmail.com', password:"hello")
+u8 = User.create(username:"jonasbrother", email: 'Nick@gmail.com', password:"morgan")
 
 
 puts "Seeding homes..."
@@ -37,7 +37,7 @@ puts "Seeding photos..."
 p1 = Photo.create(image_url: 'https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607', description: "Modern French", home:h1)
 p2 = Photo.create(image_url: 'https://wp-tid.zillowstatic.com/1/2017_ZillowExteriors_218-d1f5df.jpg', description: "Rustic Suburb", home:h2)
 p3 = Photo.create(image_url: 'https://admin.azbigmedia.com/wp-content/uploads/2020/11/highest-price-home.jpg', description: "Suburban Mansion", home:h3)
-p4 = Photo.create(image_url: 'https://www.bhg.com/thmb/0Fg0imFSA6HVZMS2DFWPvjbYDoQ=/1500x0/filters:no_upscale():[…]ved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg', description: "Modern Barn", home:h4)
+p4 = Photo.create(image_url: 'https://media.vrbo.com/lodging/47000000/46380000/46377000/46376931/ff0e352c.c10.jpg', description: "Modern beacefront", home:h4)
 p5 = Photo.create(image_url: 'https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1280w/carousel/32/craftsman_house_plan_pinyon_ridge_ii_59493_front_exterior.jpg?c=1', description:  "Modern Farm Design", home:h5)
 p6 = Photo.create(image_url: 'https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1280w/carousel/30/front_elevation.jpg?c=1', description:  "Modern Shack",home:h6)
 p7 = Photo.create(image_url: 'https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1280w/carousel/32/craftsman_house_plan_pinyon_ridge_ii_59493_front_exterior.jpg?c=1', description:  "Modern Farm Design", home:h7)

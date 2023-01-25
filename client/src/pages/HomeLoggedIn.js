@@ -15,7 +15,7 @@ function HomeLoggedIn({ user }) {
 
   return (
     <Wrapper>
-      <h1>Welcome, {user && user.email}!</h1>
+      <h1>Welcome, {user && user.username}!</h1>
       {/* {homes.length > 0 ? (
         homes.map((home) => (
           <Recipe key={home.id}>
