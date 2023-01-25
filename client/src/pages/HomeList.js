@@ -28,14 +28,17 @@ function HomeList() {
             <h1>{home.address}</h1>
             <Box>
               <img
+              
                 src={home.photos.map((photo) => photo.image_url)}
                 alt={home.bio}
                 className="homeListListings"
               />
               <ul>By {home.user.email}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
+              < div className= "ListingButton">
+              <Button  as={Link} to="/listing">View Full Listing</Button>
+              </div>
             </Box>
-            <Button as={Link} to="/listing">View Full Listing</Button>
           </Recipe>
         ))
       ) : (
