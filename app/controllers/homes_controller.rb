@@ -1,11 +1,23 @@
 class HomesController < ApplicationController
-    def index 
+    skip_before_action :authorize, only: :index
+
+    def index
         render json: Home.all
     end
 
-    def show 
+    def show
         home = Home.find_by(id: params[:id])
         render json: home, status: :ok
+    end
+
+    def create
+
+    end
+
+    private
+
+    def house_params
+        params.permit(:address, :price, :bio)
     end
 
 end
