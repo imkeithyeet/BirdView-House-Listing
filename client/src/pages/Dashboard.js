@@ -1,9 +1,10 @@
 import NewHome from "./NewHome"
+import '../styles/dashboard.css';
 
 function Dashboard({ user, setUser }) {
     return (
         <>
-        <h1>Homes for Sale: </h1>
+        <h1 className="H1"style={{color: "DarkSlateGray"}} >Homes for Sale: </h1>
             <div>
             {user.homes.map((home) => (
             <div>
@@ -16,7 +17,7 @@ function Dashboard({ user, setUser }) {
                 </div>
             ))}
             </div>
-        <h2>Sell your Home: </h2>
+        <h2 className="H2"style={{color: "DarkSlateGray"}} >Sell your Home: </h2>
         <NewHome user={user} setUser={setUser} />
         </>
     );
