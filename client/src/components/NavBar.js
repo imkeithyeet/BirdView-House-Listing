@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
+// import About from "../pages/About";
+
+
+
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {
@@ -18,12 +22,16 @@ function NavBar({ user, setUser }) {
         <Link to="/">Reciplease</Link>
       </Logo>
       <Nav>
+      <Button as={Link} to="/about">
+          About 
+        </Button>
         <Button as={Link} to="/new">
           New Recipe
         </Button>
         <Button variant="outline" onClick={handleLogoutClick}>
           Logout
         </Button>
+       
       </Nav>
     </Wrapper>
   );
