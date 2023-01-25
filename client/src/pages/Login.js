@@ -38,7 +38,7 @@ function Login({ onLogin }) {
 }
 
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: "Chunkfive", sans;
   font-size: 2rem;
   color: black;
   margin: 6px 0 16px;
