@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
+import "../styles/HomeList.css"
 
 function HomeList() {
   const [homes, setHomes] = useState([]);
@@ -18,21 +19,24 @@ function HomeList() {
       {homes.length > 0 ? (
         homes.map((home) => (
           <Recipe key={home.id}>
+            <h1>{home.address}</h1>
             <Box>
               <img
                 src={home.photos.map((photo) => photo.image_url)}
                 alt={home.bio}
+                className="homeListListings"
               />
-              <cite>By {home.user.email}</cite>
+              <ul>By {home.user.email}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
             </Box>
+            <Button as={Link} to="/listing">View Full Listing</Button>
           </Recipe>
         ))
       ) : (
         <>
           <h2>No Homes Found</h2>
           <Button as={Link} to="/new">
-            Make a New Recipe
+            List your Home!
           </Button>
         </>
       )}

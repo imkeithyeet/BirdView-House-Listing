@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
+import "../styles/HomeLoggedIn.css"
 
 function HomeLoggedIn({ user }) {
   const [homes, setHomes] = useState([]);
@@ -11,44 +12,28 @@ function HomeLoggedIn({ user }) {
     fetch("/homes")
       .then((r) => r.json())
       .then(setHomes);
-  }, []);
+  }, [user]);
 
   return (
     <Wrapper>
-      <h1>Welcome, {user && user.email}!</h1>
-      {/* {homes.length > 0 ? (
-        homes.map((home) => (
-          <Recipe key={home.id}>
-            <Box>
-              <img
-                src={home.photos.map((photo) => photo.image_url)}
-                alt={home.bio}
-              />
-              <cite>By {home.user.email}</cite>
-              <ReactMarkdown>{home.bio}</ReactMarkdown>
-            </Box>
-          </Recipe>
-        ))
-      ) : (
-        <>
-          <h2>No Homes Yet! Browse our Catalogue:</h2>
-          <Button as={Link} to="/new">
-            Make a New Recipe
-          </Button>
-        </>
-      )} */}
-      <h1>Homes for Sale: </h1>
-            <div>
-            {user.homes.map((home) => (
-            <div>
-              <img
-                src={home.photos && home.photos.map((photo) => photo.image_url)}
-                alt={home.bio}
-              />
-              <li>{home.address}</li>
+      {user && (
+        <div>
+        <h1>Welcome, {user.email}!</h1>
+          <h1>Homes for Sale: </h1>
+              <div>
+              {user.homes.map((home) => (
+              <div>
+                <img
+                  src={home.photos && home.photos.map((photo) => photo && photo.image_url)}
+                  alt={home.bio}
+                  className="dashListings"
+                />
+                <li>{home.address}</li>
+                </div>
+              ))}
               </div>
-            ))}
             </div>
+            )}
     </Wrapper>
   );
 }

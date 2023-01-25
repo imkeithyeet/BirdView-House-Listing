@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
-    before_action :authorize
-    skip_before_action :create
+    skip_before_action :authorize, only: :create
 
     def index
-        render json: User.all
+        user = User.all
+        render json: user, include: ['homes', 'homes.photos']
     end
 
     def show
-        render json: @current_user
+        render json: @current_user, include: ['homes', 'homes.photos']
     end
 
     def create
