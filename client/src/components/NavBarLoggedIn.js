@@ -15,7 +15,7 @@ function NavBarLoggedIn({ user, setUser }) {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">Birdview</Link>
+        <Link to="/">BirdView</Link>
       </Logo>
       <Nav>
         <Button as={Link} to="/about">
