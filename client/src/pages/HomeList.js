@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
 import "../styles/HomeList.css"
+import HomeCarousel from "../components/HomeCarousel";
+
 
 
 
@@ -17,6 +19,8 @@ function HomeList() {
   }, []);
 
   return (
+    <div> 
+      <HomeCarousel homes={homes} />
     <Wrapper>
       {homes.length > 0 ? (
         homes.map((home) => (
@@ -43,6 +47,7 @@ function HomeList() {
         </>
       )}
     </Wrapper>
+    </div>
   );
 }
 

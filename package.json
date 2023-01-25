@@ -11,6 +11,7 @@
     "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
   },
   "dependencies": {
-    "carousel-react-rcdev": "^0.0.5"
+    "carousel-react-rcdev": "^0.0.5",
+    "react-responsive-carousel": "^3.2.23"
   }
 }
