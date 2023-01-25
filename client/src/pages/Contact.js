@@ -8,7 +8,6 @@ function Contact() {
                 <p1 className="P1" style={{color: "#c2f6fa"}}>Find us at some address at some place or call us at some number</p1>
                 <p1 className="P1" style={{color: "#c2f6fa", padding:"20px"}}>Reserve a table, ask for today's special, or just send us a message:</p1>
                 <form style={{color: "black"}}>
-
                     <label>Name:</label>
                     <input  placeholder="Name..." type="text" name="name" />
                     <label># of Guest</label>

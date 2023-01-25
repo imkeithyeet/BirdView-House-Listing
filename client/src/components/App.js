@@ -8,9 +8,7 @@ import NewHome from "../pages/NewHome";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import HomeLoggedIn from "../pages/HomeLoggedIn";
-
-
-
+import Dashboard from "../pages/Dashboard";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,12 +23,9 @@ function App() {
 
   if (!user) return (
     <>
-      <NavBar user={user} setUser={setUser} />
+      <NavBar />
       <main>
         <Switch>
-          <Route path="/new">
-            <NewHome user={user} />
-          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -54,8 +49,8 @@ function App() {
       <NavBarLoggedIn user={user} setUser={setUser} />
       <main>
         <Switch>
-          <Route path="/new">
-            <NewHome user={user} />
+          <Route path="/dashboard">
+            <Dashboard user={user} />
           </Route>
           <Route path="/contact">
             <Contact />

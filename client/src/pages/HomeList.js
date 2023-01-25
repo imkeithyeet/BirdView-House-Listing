@@ -32,7 +32,7 @@ function HomeList() {
         <>
           <h2>No Homes Found</h2>
           <Button as={Link} to="/new">
-            Make a New Recipe
+            Sell your home!
           </Button>
         </>
       )}

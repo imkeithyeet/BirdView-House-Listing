@@ -2,20 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
-// import About from "../pages/About";
 
 
-
-
-function NavBar({ user, setUser }) {
-  function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
-  }
-
+function NavBar() {
   return (
     <Wrapper>
       <Logo>
@@ -23,7 +12,7 @@ function NavBar({ user, setUser }) {
       </Logo>
       <Nav>
       <Button as={Link} to="/about">
-          About 
+          About
         </Button>
         <Button as={Link} to="/contact">
           Contact
@@ -31,7 +20,6 @@ function NavBar({ user, setUser }) {
         <Button as={Link} to="/login">
           Login/Signup
         </Button>
-
       </Nav>
     </Wrapper>
   );
