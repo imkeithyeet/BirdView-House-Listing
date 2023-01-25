@@ -26,7 +26,7 @@ function NavBar({ user, setUser }) {
           About 
         </Button>
         <Button as={Link} to="/contact">
-          Contact 
+          Contact
         </Button>
         <Button as={Link} to="/login">
           Login/Signup
