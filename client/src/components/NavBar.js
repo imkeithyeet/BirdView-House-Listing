@@ -22,22 +22,13 @@ function NavBar({ user, setUser }) {
         <Link to="/">Birdview</Link>
       </Logo>
       <Nav>
-
       <Button as={Link} to="/about">
           About 
         </Button>
-        <Button as={Link} to="/new">
-          New Recipe
-        </Button>
-        <Button variant="outline" onClick={handleLogoutClick}>
-          Logout
-        {/* <Button as={Link} to="/about">
-          About
-        </Button> */}
         <Button as={Link} to="/login">
           Login/Signup
         </Button>
-       
+
       </Nav>
     </Wrapper>
   );

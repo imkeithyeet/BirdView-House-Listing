@@ -28,6 +28,9 @@ function App() {
           <Route path="/new">
             <NewHome user={user} />
           </Route>
+          <Route path="/about">
+            <About />
+          </Route>
           <Route path="/login">
             <Login onLogin={setUser} />
           </Route>

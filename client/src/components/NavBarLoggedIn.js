@@ -18,9 +18,12 @@ function NavBarLoggedIn({ user, setUser }) {
         <Link to="/">Reciplease</Link>
       </Logo>
       <Nav>
-        <Button as={Link} to="/new">
-          New Recipe
+        <Button as={Link} to="/about">
+          About 
         </Button>
+        {/* <Button as={Link} to="/new">
+          New Recipe
+        </Button> */}
         <Button variant="outline" onClick={handleLogoutClick}>
           Logout
         </Button>
