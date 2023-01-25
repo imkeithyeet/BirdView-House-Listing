@@ -5,6 +5,9 @@ import NavBarLoggedIn from "./NavBarLoggedIn";
 import Login from "../pages/Login";
 import HomeList from "../pages/HomeList";
 import NewHome from "../pages/NewHome";
+import About from "../pages/About";
+
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -44,6 +47,9 @@ function App() {
         <Switch>
           <Route path="/new">
             <NewHome user={user} />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route path="/">
             <HomeList />
