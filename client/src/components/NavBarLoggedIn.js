@@ -17,17 +17,20 @@ function NavBarLoggedIn({ user, setUser }) {
       <Logo>
         <Link to="/">BirdView</Link>
       </Logo>
-      <Nav>
-        <Button as={Link} to="/about">
-          About 
-        </Button>
-        <Button as={Link} to="/contact">
-          Contact
-        </Button>
-        <Button variant="outline" onClick={handleLogoutClick}>
-          Logout
-        </Button>
-      </Nav>
+        <Nav>
+          <Button as={Link} to="/dashboard">
+            Dashboard
+          </Button>
+          <Button as={Link} to="/about">
+            About
+          </Button>
+          <Button as={Link} to="/contact">
+            Contact
+          </Button>
+          <Button variant="outline" onClick={handleLogoutClick}>
+            Logout
+          </Button>
+        </Nav>
     </Wrapper>
   );
 }
