@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 
-function NewHome({ user }) {
+function NewHome({ user, setUser }) {
   const [address, setAddress] = useState("My Awesome Home");
   const [price, setPrice] = useState("250000");
   const [bio, setBio] = useState(`Some facts about my Home`);
@@ -22,18 +22,30 @@ function NewHome({ user }) {
       },
       body: JSON.stringify({
         address,
-        bio,
-        minutes_to_complete: price,
+        price,
+        bio
       }),
     }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        history.push("/");
+      if (r.status === 201) {
+        r.json().then((data) => {
+          if(user){
+            setUser({ ...user, homes: [...user.homes, data] });
+            history.push("/");
+            setIsLoading(false);
+          }
+        });
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((err) => {
+          setErrors(err.errors);
+          setIsLoading(false);
+        });
       }
+    })
+    .catch((error) => {
+      console.log(error);
+      setIsLoading(false);
     });
-  }
+}
 
   return (
     <Wrapper>

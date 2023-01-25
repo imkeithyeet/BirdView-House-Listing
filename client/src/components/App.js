@@ -8,6 +8,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
+import Listing from "../pages/Listing"
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,13 +35,15 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
+          <Route path="/listing">
+            <Listing user={user} />
+          </Route>
           <Route path="/">
             <HomeList />
           </Route>
         </Switch>
       </main>
     </>
-  // <Login onLogin={setUser} />
   );
 
   return (
@@ -49,13 +52,16 @@ function App() {
       <main>
         <Switch>
           <Route path="/dashboard">
-            <Dashboard user={user} />
+            <Dashboard user={user} setUser={setUser} />
           </Route>
           <Route path="/contact">
             <Contact />
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/listing">
+            <Listing user={user} />
           </Route>
           <Route path="/">
             <HomeLoggedIn user={user} />
