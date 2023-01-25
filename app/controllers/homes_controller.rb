@@ -10,10 +10,6 @@ class HomesController < ApplicationController
         render json: home, status: :ok
     end
 
-    def create
-
-    end
-
     private
 
     def house_params
