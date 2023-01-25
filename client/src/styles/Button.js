@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const COLORS = {
   primary: {
-    "--main": "Space Cadet",
+    "--main": "26, 0, 11, 44",
     "--accent": "black",
   },
   secondary: {
-    "--main": "Space Cadet",
-    "--accent": "black",
+    "--main": "SpaceCadet",
+    "--accent": "purple",
   },
 };
 

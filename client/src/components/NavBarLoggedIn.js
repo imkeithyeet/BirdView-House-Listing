@@ -15,7 +15,7 @@ function NavBarLoggedIn({ user, setUser }) {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">Reciplease</Link>
+        <Link to="/">BirdView</Link>
       </Logo>
       <Nav>
         <Button as={Link} to="/about">
@@ -40,7 +40,7 @@ const Wrapper = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: Chunkfive, sans;
   font-size: 3rem;
   color: deeppink;
   margin: 0;
