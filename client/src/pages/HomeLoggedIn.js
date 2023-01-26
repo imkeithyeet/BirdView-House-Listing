@@ -18,9 +18,14 @@ function HomeLoggedIn({ user }) {
     <Wrapper>
       {user && (
         <div>
-          <h1>Welcome, {user.email}!</h1>
+          <h1>Welcome, {user.username}!</h1>
+          <h2>
+            {`You have `}
+            <Link to="/dashboard">{user.offer_count}</Link>
+            {user.offer_count == 1 ? ' offer!' : ' offers!'}
+          </h2>
             <h1>Browse our Catalogue of Homes: </h1>
-            <Wrapper>
+            <Wrapper className="homeLoggedList" >
       {homes.length > 0 ? (
         homes.map((home) => (
           <Recipe key={home.id}>

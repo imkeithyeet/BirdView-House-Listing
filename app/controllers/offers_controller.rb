@@ -16,7 +16,6 @@ class OffersController < ApplicationController
         render json: offer, status: :created
     end
 
-
     private
 
     def offer_params
