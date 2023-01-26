@@ -1,0 +1,19 @@
+.navbar {
+  background: transparent;
+  height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+
+.navbar-active {
+  background: black;
+  height: 73px;
+  z-index: 999 !important;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}

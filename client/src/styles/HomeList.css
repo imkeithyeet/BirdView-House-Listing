@@ -1,23 +1,45 @@
+.homelist {
+  position: relative;
+  top: 980px;
+}
 .homeListListings {
-    height: 490px;
-    width: relative;
-    position: relative;
-
+  height: 490px;
+  width: relative;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
-ul{
-    font-size: 30px;
-    width: relative;
-    position: relative;
-    text-align: center;
+ul {
+  font-size: 30px;
+  width: relative;
+  position: relative;
+  text-align: center;
 }
-p{
-    font-size: 25px;
-    width: relative;
-    position: relative;
-    text-align: center;
+p {
+  font-size: 25px;
+  width: relative;
+  position: relative;
+  text-align: center;
 }
-.ListingButton{
-   display: flex;
-   justify-content: center;
-    
+.ListingButton {
+  display: flex;
+  justify-content: center;
+}
+.home-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 100;
+}
+.carousel-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -15vh;
+  left: -15vw;
+  z-index: 1;
 }
