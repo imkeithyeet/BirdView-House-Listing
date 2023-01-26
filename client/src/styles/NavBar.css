@@ -2,7 +2,7 @@
   background: transparent;
   height: 73px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   position: sticky;
   top: 0px;
@@ -12,7 +12,9 @@
 .navbar-active {
   background: white;
   height: 73px;
-  z-index: 999 !important;
+  display: flex;
+  justify-content: left;
+  align-items: center;
   position: sticky;
   top: 0px;
   z-index: 1000;

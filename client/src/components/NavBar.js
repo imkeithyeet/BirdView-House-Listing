@@ -29,7 +29,9 @@ function NavBar({ user, setUser }) {
     <nav className={navBar ? "navbar-active" : "navbar"}>
       <Wrapper>
         <Logo>
-          <Link to="/">BirdView</Link>
+          <Link to="/" className="logo">
+            BirdView
+          </Link>
         </Logo>
         <Nav>
           <Button as={Link} to="/about">
@@ -63,13 +65,7 @@ const Logo = styled.h1`
   text-shadow: 1px 1px 1px;
   display: inline-block;
   width: 100%;
-  text-align: left;
-
-
-
-
-
-  
+  // text-align: left;
 
   a {
     color: inherit;
