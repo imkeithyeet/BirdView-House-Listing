@@ -60,10 +60,21 @@ const Logo = styled.h1`
   color: CadetBlue;
   margin: 0;
   line-height: 1;
+  text-shadow: 1px 1px 1px;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+
+
+
+
+
+  
 
   a {
     color: inherit;
     text-decoration: none;
+    position: relative;
   }
 `;
 

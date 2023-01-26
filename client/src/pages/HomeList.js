@@ -33,8 +33,9 @@ function HomeList() {
                 />
                 <ul>By {home.user.email}</ul>
                 <ReactMarkdown>{home.bio}</ReactMarkdown>
-                <div className="ListingButton">
-                  <Button as={Link} to="/listing">
+                <ul className="Price">${home.price}</ul>
+                <div className= "ListingButton">
+                  <Button as={Link} to={`/homes?id=${home.id}`} >
                     View Full Listing
                   </Button>
                 </div>

@@ -1,0 +1,29 @@
+.H5{
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+    
+}
+.p1{
+     position: absolute;
+    font-size: 30px;
+    top: 740px;
+    padding-left:400px;
+    padding-right:400px;
+  
+
+}
+.P{
+     position: relative;
+    font-size: 30px;
+    top: 200px;
+    padding:10px;
+}
+.Img{
+   display: block;
+   margin-left: auto;
+    margin-right: auto;
+   width: 27%;
+  border-radius: 7px;
+
+}
