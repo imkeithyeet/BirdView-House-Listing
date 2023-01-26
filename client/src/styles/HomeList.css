@@ -1,6 +1,11 @@
 .homelist {
   position: relative;
   top: 980px;
+  display: flex;
+  overflow-x: auto;
+  left: 0;
+  margin: 5rem 0;
+  max-width: calc(980vw - 2rem);
 }
 .homeListListings {
   height: 490px;
@@ -42,4 +47,8 @@ p {
   top: -15vh;
   left: -15vw;
   z-index: 1;
+}
+.carousel-caption {
+  position: relative;
+  text-align: center;
 }

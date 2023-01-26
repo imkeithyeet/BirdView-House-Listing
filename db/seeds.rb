@@ -23,25 +23,25 @@ u8 = User.create(username:"jonasbrother", email: 'Nick@gmail.com', password:"mor
 
 
 puts "Seeding homes..."
-h1 = Home.create( address: "123 broken dreams", price:700000, bio:"Modern escape", user:u1)
-h2 = Home.create( address: "456 whats my name", price:700000, bio:"Hope is lost", user:u2)
-h3 = Home.create( address: "500 downtown lane", price:700000, bio:"Modern living", user:u3)
-h4 = Home.create( address: "700 beats rd", price:700000, bio:"Windy beach oasis", user:u4)
-h5 = Home.create( address: "300 laughable lane", price:700000, bio:"Southern escape", user:u5)
-h6 = Home.create( address: "12921 haywire street", price:700000, bio:"quiet city front", user:u6)
-h7 = Home.create( address: "5757 lemon ave", price:700000, bio:"closed off terrace", user:u7)
-h8 = Home.create( address: "5757 lemon ave", price:700000, bio:"closed off terrace", user:u8)
+h1 = Home.create( address: "123 broken dreams", price:700000, bio:"Modern Escape", user:u1)
+h2 = Home.create( address: "456 whats my name", price:700000, bio:"Hope is Lost", user:u2)
+h3 = Home.create( address: "500 downtown lane", price:700000, bio:"Modern Living", user:u3)
+h4 = Home.create( address: "700 beats rd", price:700000, bio:"Windy Beach Oasis", user:u4)
+h5 = Home.create( address: "300 laughable lane", price:700000, bio:"Southern Escape", user:u5)
+h6 = Home.create( address: "12921 haywire street", price:700000, bio:"Quiet City Front", user:u6)
+h7 = Home.create( address: "5757 lemon ave", price:700000, bio:"Closed Off Terrace", user:u7)
+h8 = Home.create( address: "5757 lemon ave", price:700000, bio:"Wooden Bliss", user:u8)
 
 
 puts "Seeding photos..."
-p1 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/87842c264b9338c9e4df482b623f6ff2-uncropped_scaled_within_1536_1152.webp', description: "Modern French", home:h1)
-p2 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/58dcf8d95e06f3673917e59ad768b1a2-uncropped_scaled_within_1536_1152.webp', description: "Rustic Suburb", home:h2)
-p3 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/42eaeb84268af1ea12270bbb9bcb0b02-uncropped_scaled_within_1536_1152.webp', description: "Suburban Mansion", home:h3)
-p4 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Modern beacefront", home:h4)
-p5 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/30fade5563ba4103958f4878a3308df0-uncropped_scaled_within_1536_1152.webp', description:  "Modern Farm Design", home:h5)
-p6 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e81e795e66ad59454d798340a538c3ab-uncropped_scaled_within_1536_1152.webp', description:  "Modern Shack",home:h6)
-p7 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/0db72555ed567b919659248788e6f7c2-uncropped_scaled_within_1536_1152.webp', description:  "Modern Farm Design", home:h7)
-p8 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/c88a83e28265f043bd586b875fb23397-uncropped_scaled_within_1536_1152.webp', description: "Suburban Mansion", home:h8)
+p1 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/87842c264b9338c9e4df482b623f6ff2-uncropped_scaled_within_1536_1152.webp', description: "Modern Escape", home:h1)
+p2 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/58dcf8d95e06f3673917e59ad768b1a2-uncropped_scaled_within_1536_1152.webp', description: "Hope is Lost", home:h2)
+p3 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/42eaeb84268af1ea12270bbb9bcb0b02-uncropped_scaled_within_1536_1152.webp', description: "Modern Living", home:h3)
+p4 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)
+p5 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/30fade5563ba4103958f4878a3308df0-uncropped_scaled_within_1536_1152.webp', description:  "Southern Escape", home:h5)
+p6 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e81e795e66ad59454d798340a538c3ab-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)
+p7 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/0db72555ed567b919659248788e6f7c2-uncropped_scaled_within_1536_1152.webp', description:  "Closed Off Terrace", home:h7)
+p8 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/c88a83e28265f043bd586b875fb23397-uncropped_scaled_within_1536_1152.webp', description: "Wooden Bliss", home:h8)
 
 
 

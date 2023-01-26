@@ -10,7 +10,7 @@
 }
 
 .navbar-active {
-  background: black;
+  background: white;
   height: 73px;
   z-index: 999 !important;
   position: sticky;

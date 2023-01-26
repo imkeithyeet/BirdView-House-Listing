@@ -1,6 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React, { useState } from "react";
+
 function HomeCarousel({ homes }) {
   const renderSlides = homes.map((home) =>
     home.photos.map((photo) => (
@@ -10,7 +11,7 @@ function HomeCarousel({ homes }) {
           src={photo.image_url}
           alt={photo.description}
         />
-        <p className="caption">{photo.description}</p>
+        <p className="carousel-caption">{photo.description}</p>
       </div>
     ))
   );

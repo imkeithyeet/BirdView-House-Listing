@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
 import "../styles/NavBar.css";
-// import About from "../pages/About";
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {
@@ -17,7 +16,7 @@ function NavBar({ user, setUser }) {
   const [navBar, setNavBar] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 25) {
       setNavBar(true);
     } else {
       setNavBar(false);
@@ -25,11 +24,6 @@ function NavBar({ user, setUser }) {
   };
 
   window.addEventListener("scroll", changeBackground);
-
-  // useEffect(() => {
-  //   changeBackground();
-  //   window.addEventListener("scroll", changeBackground);
-  // });
 
   return (
     <nav className={navBar ? "navbar-active" : "navbar"}>
