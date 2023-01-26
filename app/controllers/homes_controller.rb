@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+    include ActiveSupport::NumberHelper
     skip_before_action :authorize, only: [:index, :show]
 
     def index
