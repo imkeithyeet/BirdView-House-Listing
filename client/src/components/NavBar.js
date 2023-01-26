@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "../styles";
 
 
+
 // import About from "../pages/About";
 
 
@@ -48,12 +49,17 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: Chunkfive, sans;
   font-size: 3rem;
-  color: CadetBlue	;
+  color: CadetBlue;
   margin: 0;
   line-height: 1;
   text-shadow: 1px 1px 1px;
-  position: relative;
-  right: 829px;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+
+
+
+
 
   
 

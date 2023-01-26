@@ -30,7 +30,7 @@ h4 = Home.create( address: "1820 West Lawn Ave, Madison, WI 53711", price:850000
 h5 = Home.create( address: "679 County Road 1465, Bonham, TX 75418", price:700000, bio:"Southern style suburban forest environment", user:u5)
 h6 = Home.create( address: "824 Mountain Ave, Wyckoff, NJ 07481", price:900000, bio:"Small Secluded house with modern design in a rural environment  ", user:u6)
 h7 = Home.create( address: "679 County Road 1465, Bonham, TX 75418", price:700000, bio:"Southern style suburban forest environment", user:u7)
-h8 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:700000, bio:"Suburban mansion that encapsulates the wealth and view of Paradise Valleye", user:u8)
+h8 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:600000, bio:"Suburban mansion that encapsulates the wealth and view of Paradise Valleye", user:u8)
 
 
 puts "Seeding photos..."
