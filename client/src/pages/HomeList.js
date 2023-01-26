@@ -5,8 +5,6 @@ import styled from "styled-components";
 import { Box, Button } from "../styles";
 import "../styles/HomeList.css"
 
-
-
 function HomeList() {
   const [homes, setHomes] = useState([]);
 
@@ -31,7 +29,9 @@ function HomeList() {
               <ul>By {home.user.email}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
             </Box>
-            <Button as={Link} to="/listing">View Full Listing</Button>
+            <Button as={Link} to={`/homes?id=${home.id}`} >
+              View Full Listing
+            </Button>
           </Recipe>
         ))
       ) : (
