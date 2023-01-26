@@ -1,9 +1,20 @@
 import NewHome from "./NewHome"
 import '../styles/dashboard.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Dashboard({ user, setUser }) {
     const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        if (!user) {
+            // make API call to fetch user data
+            fetch("/users/" + user.id)
+                .then((res) => res.json())
+                .then((data) => {
+                    setUser(data);
+                    setIsLoading(false);
+                });
+        }
+    }, []);
     return (
         <>
         <h1 className="H1"style={{color: "DarkSlateGray"}} >Homes for Sale: </h1>
@@ -17,7 +28,15 @@ function Dashboard({ user, setUser }) {
                     className="dashListings"
                     onLoad={() => setIsLoading(false)}
                     />
-                <li>{home.address}</li>
+                <h3>{home.address}</h3>
+                {home.offers && home.offers.map((offer) => {
+                    return (
+                        <div>Offers:
+                            <li>${offer.amount}</li>
+                            <li>Offered By: {offer.user && offer.user.username}</li>
+                        </div>
+                    )
+                })}
                 </div>
             ))}
             </div>

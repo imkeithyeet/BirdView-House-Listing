@@ -3,11 +3,11 @@ class UsersController < ApplicationController
 
     def index
         user = User.all
-        render json: user, include: ['homes', 'homes.photos']
+        render json: user, include: ['homes', 'homes.photos', 'homes.offers']
     end
 
     def show
-        render json: @current_user, include: ['homes', 'homes.photos']
+        render json: @current_user, include: ['homes', 'homes.photos', 'homes.offers', 'homes.offers.user']
     end
 
     def create
