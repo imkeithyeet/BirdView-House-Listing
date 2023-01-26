@@ -1,18 +1,45 @@
 
 .H3{
-    position:relative;
-    text-align: center;
-    font-size:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 55px;
 }
 
 
 .P3{
-    position:absolute;
-    top: 500px;
-    padding-left:200px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    
 
 }
-.Submit{
-    position:absolute;
-    right: 30px;
+.Send{
+    position: relative;
+    text-align: center;
+    right: 2px;
+    top: 12px;
+
+
+
 }
+.Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+
+} 
+.P1{
+    position: absolute;
+    text-align: center;
+    font-size: 20px; 
+     left: 840px;
+     top:300px;
+    
+}
+
+
