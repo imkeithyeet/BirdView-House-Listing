@@ -2,10 +2,13 @@
 .H3{
     position:relative;
     text-align: center;
+    font-size:50px;
 }
 
 
 .P3{
-    position:relative;
-    bottom: 100px;
+    position:absolute;
+    top: 500px;
+    padding-left:200px
+
 }
