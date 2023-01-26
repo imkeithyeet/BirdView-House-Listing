@@ -35,8 +35,8 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/listing">
-            <Listing user={user} />
+          <Route path="/homes">
+            <Listing />
           </Route>
           <Route path="/">
             <HomeList />
@@ -60,7 +60,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/listing">
+          <Route path="/homes">
             <Listing user={user} />
           </Route>
           <Route path="/">

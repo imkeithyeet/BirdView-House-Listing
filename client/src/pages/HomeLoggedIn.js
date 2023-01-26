@@ -18,20 +18,36 @@ function HomeLoggedIn({ user }) {
     <Wrapper>
       {user && (
         <div>
-        <h1>Welcome, {user.email}!</h1>
-          <h1>Homes for Sale: </h1>
-              <div>
-              {user.homes.map((home) => (
-              <div>
-                <img
-                  src={home.photos && home.photos.map((photo) => photo && photo.image_url)}
-                  alt={home.bio}
-                  className="dashListings"
-                />
-                <li>{home.address}</li>
-                </div>
-              ))}
-              </div>
+          <h1>Welcome, {user.email}!</h1>
+            <h1>Browse our Catalogue of Homes: </h1>
+            <Wrapper>
+      {homes.length > 0 ? (
+        homes.map((home) => (
+          <Recipe key={home.id}>
+            <h1>{home.address}</h1>
+            <Box>
+              <img
+                src={home.photos.map((photo) => photo.image_url)}
+                alt={home.bio}
+                className="homeListListings"
+              />
+              <ul>By {home.user.email}</ul>
+              <ReactMarkdown>{home.bio}</ReactMarkdown>
+            </Box>
+            <Button as={Link} to={`/homes?id=${home.id}`} >
+              View Full Listing
+            </Button>
+          </Recipe>
+        ))
+      ) : (
+        <>
+          <h2>No Homes Found</h2>
+          <Button as={Link} to="/new">
+            List your Home!
+          </Button>
+        </>
+      )}
+    </Wrapper>
             </div>
             )}
     </Wrapper>
