@@ -7,8 +7,6 @@ import "../styles/HomeList.css"
 import HomeCarousel from "../components/HomeCarousel";
 
 
-
-
 function HomeList() {
   const [homes, setHomes] = useState([]);
 
@@ -38,7 +36,9 @@ function HomeList() {
               <ul className="Price">${home.price}</ul>
 
               < div className= "ListingButton">
-              <Button  as={Link} to="/listing">View Full Listing</Button>
+                <Button as={Link} to={`/homes?id=${home.id}`} >
+                  View Full Listing
+                </Button>
               </div>
             </Box>
           </Recipe>
