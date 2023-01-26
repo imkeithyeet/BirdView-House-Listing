@@ -1,4 +1,23 @@
 .homeListListings {
-    height: 250px;
-    width: relative
+    height: 490px;
+    width: relative;
+    position: relative;
+
+}
+ul{
+    font-size: 30px;
+    width: relative;
+    position: relative;
+    text-align: center;
+}
+p{
+    font-size: 25px;
+    width: relative;
+    position: relative;
+    text-align: center;
+}
+.ListingButton{
+   display: flex;
+   justify-content: center;
+    
 }
