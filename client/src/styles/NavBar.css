@@ -1,0 +1,21 @@
+.navbar {
+  background: transparent;
+  height: 73px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+
+.navbar-active {
+  background: white;
+  height: 73px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
