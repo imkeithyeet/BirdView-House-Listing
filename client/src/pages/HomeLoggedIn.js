@@ -19,6 +19,8 @@ function HomeLoggedIn({ user }) {
       {user && (
         <div>
         <h1>Welcome, {user.email}!</h1>
+        <p2 className="P2" >Browse through our beautiful home listings!</p2>
+
           <h1>Homes for Sale: </h1>
               <div>
               {user.homes.map((home) => (
