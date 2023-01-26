@@ -3,12 +3,14 @@ import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import { Button } from "../styles";
+import "../styles/Login.css"
+
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <Wrapper>
+    <Wrapper className="Signup">
       <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
       </Logo>
       {showLogin ? (

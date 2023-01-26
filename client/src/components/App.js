@@ -9,9 +9,13 @@ import Contact from "../pages/Contact";
 import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
 import Listing from "../pages/Listing"
+import DarkMode from "./DarkMode";
+import "../styles/DarkMode.css";
+
 
 function App() {
   const [user, setUser] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -23,10 +27,11 @@ function App() {
 
   if (!user) return (
     <>
-      <NavBar />
-      <main>
-        <Switch>
+      <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
+      <main className={darkMode ? "dark-mode" : "light-mode"}>
+        <Switch> 
           <Route path="/about">
+            
             <About />
           </Route>
           <Route path="/login">

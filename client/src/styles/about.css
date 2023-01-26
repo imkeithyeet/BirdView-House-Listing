@@ -2,6 +2,8 @@
     position: relative;
     text-align: center;
     font-size: 60px;
+    top: 150px;
+
     
 }
 .p1{
@@ -16,14 +18,17 @@
 .P{
      position: relative;
     font-size: 30px;
-    top: 200px;
+    top: 450px;
     padding:10px;
+
 }
 .Img{
    display: block;
    margin-left: auto;
     margin-right: auto;
-   width: 27%;
+   width: 28%;
   border-radius: 7px;
+  bottom: 200px;
+  top: 200px;
 
 }

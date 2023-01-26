@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Button } from "../styles";
 import "../styles/NavBar.css";
 
-function NavBar({ user, setUser }) {
+function NavBar({ user, setUser, darkMode, setDarkMode}) {
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -33,6 +33,16 @@ function NavBar({ user, setUser }) {
             BirdView
           </Link>
         </Logo>
+        <div className="container">
+        <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+        <div className="switch-checkbox">
+          <label className="switch">
+            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+            <span className="slider round"> </span>
+          </label>
+        </div>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
+      </div>
         <Nav>
           <Button as={Link} to="/about">
             About
