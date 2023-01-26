@@ -26,13 +26,15 @@ function HomeList() {
             <h1>{home.address}</h1>
             <Box>
               <img
-              
                 src={home.photos.map((photo) => photo.image_url)}
                 alt={home.bio}
                 className="homeListListings"
               />
+               <p4>{home.user.username}</p4>
               <ul>By {home.user.email}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
+              <ul className="Price">${home.price}</ul>
+
               < div className= "ListingButton">
                 <Button as={Link} to={`/homes?id=${home.id}`} >
                   View Full Listing

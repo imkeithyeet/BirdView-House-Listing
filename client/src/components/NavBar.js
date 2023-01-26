@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
+
 // import About from "../pages/About";
 
 
@@ -19,7 +20,7 @@ function NavBar({ user, setUser }) {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">BirdView</Link>
+        <Link className="Logo" to="/">BirdView</Link>
       </Logo>
       <Nav>
       <Button as={Link} to="/about">

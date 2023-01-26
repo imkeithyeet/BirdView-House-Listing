@@ -64,3 +64,4 @@ const Recipe = styled.article`
 `;
 
 export default HomeLoggedIn;
+
