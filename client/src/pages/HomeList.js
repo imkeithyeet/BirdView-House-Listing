@@ -30,7 +30,7 @@ function HomeList() {
                 alt={home.bio}
                 className="homeListListings"
               />
-               <p4>{home.user.username}</p4>
+              <p4>{home.user.username}</p4>
               <ul>By {home.user.email}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
               <ul className="Price">${home.price}</ul>

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :offers
   resources :photos
   resources :homes, only: [:index, :show, :create]
+  resources :homes do
+    resources :offers, only: [:show, :index, :create]
+  end
   resources :users, only: [:index, :show, :create]
   post"/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"

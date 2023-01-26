@@ -2,7 +2,8 @@ class HomesController < ApplicationController
     skip_before_action :authorize, only: [:index, :show]
 
     def index
-        render json: Home.all
+        homes = Home.all
+        render json: homes, include: [:user]
     end
 
     def show

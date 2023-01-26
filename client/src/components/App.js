@@ -36,11 +36,7 @@ function App() {
             <Contact />
           </Route>
           <Route path="/homes">
-
             <Listing  />
-
-            <Listing />
-
           </Route>
           <Route path="/">
             <HomeList />
