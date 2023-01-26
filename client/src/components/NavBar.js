@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
 
+
 // import About from "../pages/About";
 
 
@@ -50,10 +51,16 @@ const Logo = styled.h1`
   color: CadetBlue	;
   margin: 0;
   line-height: 1;
+  text-shadow: 1px 1px 1px;
+  position: relative;
+  right: 829px;
+
+  
 
   a {
     color: inherit;
     text-decoration: none;
+    position: relative;
   }
 `;
 
