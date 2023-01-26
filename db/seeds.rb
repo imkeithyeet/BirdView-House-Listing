@@ -34,14 +34,14 @@ h8 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:60
 
 
 puts "Seeding photos..."
-p1 = Photo.create(image_url: 'https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607', description: "Modern French", home:h1)
-p2 = Photo.create(image_url: 'https://wp-tid.zillowstatic.com/1/2017_ZillowExteriors_218-d1f5df.jpg', description: "Rustic Suburb", home:h2)
-p3 = Photo.create(image_url: 'https://admin.azbigmedia.com/wp-content/uploads/2020/11/highest-price-home.jpg', description: "Suburban Mansion", home:h3)
-p4 = Photo.create(image_url: 'https://media.vrbo.com/lodging/47000000/46380000/46377000/46376931/ff0e352c.c10.jpg', description: "Modern beacefront", home:h4)
-p5 = Photo.create(image_url: 'https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1280w/carousel/32/craftsman_house_plan_pinyon_ridge_ii_59493_front_exterior.jpg?c=1', description:  "Modern Farm Design", home:h5)
-p6 = Photo.create(image_url: 'https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1280w/carousel/30/front_elevation.jpg?c=1', description:  "Modern Shack",home:h6)
-p7 = Photo.create(image_url: 'https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1280w/carousel/32/craftsman_house_plan_pinyon_ridge_ii_59493_front_exterior.jpg?c=1', description:  "Modern Farm Design", home:h7)
-p8 = Photo.create(image_url: 'https://admin.azbigmedia.com/wp-content/uploads/2020/11/highest-price-home.jpg', description: "Suburban Mansion", home:h8)
+p1 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/87842c264b9338c9e4df482b623f6ff2-uncropped_scaled_within_1536_1152.webp', description: "Modern Escape", home:h1)
+p2 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/58dcf8d95e06f3673917e59ad768b1a2-uncropped_scaled_within_1536_1152.webp', description: "Hope is Lost", home:h2)
+p3 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/42eaeb84268af1ea12270bbb9bcb0b02-uncropped_scaled_within_1536_1152.webp', description: "Modern Living", home:h3)
+p4 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)
+p5 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/30fade5563ba4103958f4878a3308df0-uncropped_scaled_within_1536_1152.webp', description:  "Southern Escape", home:h5)
+p6 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e81e795e66ad59454d798340a538c3ab-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)
+p7 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/0db72555ed567b919659248788e6f7c2-uncropped_scaled_within_1536_1152.webp', description:  "Closed Off Terrace", home:h7)
+p8 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/c88a83e28265f043bd586b875fb23397-uncropped_scaled_within_1536_1152.webp', description: "Wooden Bliss", home:h8)
 
 
 
