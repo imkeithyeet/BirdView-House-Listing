@@ -28,7 +28,7 @@
   }
   
   .light-mode {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     color: rgb(57, 56, 56);
     height: 100%;
     transition: background-color 0.25s ease-in-out;

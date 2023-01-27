@@ -9,6 +9,12 @@ import HomeCarousel from "../components/HomeCarousel";
 function HomeList() {
   const [homes, setHomes] = useState([]);
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
+
   useEffect(() => {
     fetch("/homes")
       .then((r) => r.json())
@@ -33,7 +39,7 @@ function HomeList() {
                 />
                 <ul>By {home.user.email}</ul>
                 <ReactMarkdown>{home.bio}</ReactMarkdown>
-                <ul className="Price">${home.price}</ul>
+                <ul className="Price">${numberWithCommas (home.price)}</ul>
                 <div className= "ListingButton">
                   <Button as={Link} to={`/homes?id=${home.id}`} >
                     View Full Listing
