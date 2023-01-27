@@ -29,7 +29,7 @@ function HomeCarousel({ homes }) {
       autoPlay={true}
       infiniteLoop={true}
       showStatus={false}
-      showIndicators={true}
+      showIndicators={false}
       transitionTime={30}
       onChange={handleChange}
       selectedItem={homes[currentIndex]?.photos[0]}
