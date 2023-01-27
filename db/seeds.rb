@@ -34,7 +34,7 @@ h8 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:60
 
 
 puts "Seeding photos..."
-p1 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/87842c264b9338c9e4df482b623f6ff2-uncropped_scaled_within_1536_1152.webp', description: "Modern Escape", home:h1)
+p1 = Photo.create(image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/62/52c44e01bb2065995311541ad5e77417-uncropped_scaled_within_1536_1152.webp', description: "Modern Escape", home:h1)
 p2 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/58dcf8d95e06f3673917e59ad768b1a2-uncropped_scaled_within_1536_1152.webp', description: "Hope is Lost", home:h2)
 p3 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/42eaeb84268af1ea12270bbb9bcb0b02-uncropped_scaled_within_1536_1152.webp', description: "Modern Living", home:h3)
 p4 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)

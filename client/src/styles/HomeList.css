@@ -8,13 +8,16 @@
   max-width: calc(980vw - 2rem);
 }
 .carousel-image{
-  padding-top:100px;
+
+
+
 
 
 
 }
 .homeListListings {
   height: 490px;
+  top:89px;
   width: absolute;
   position: sticky;
   margin-left: auto;

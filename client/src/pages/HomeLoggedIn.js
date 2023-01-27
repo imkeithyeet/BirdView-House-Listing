@@ -18,8 +18,8 @@ function HomeLoggedIn({ user }) {
     <Wrapper>
       {user && (
         <div>
-          <h1>Welcome, {user.email}!</h1>
-            <h1>Browse our Catalogue of Homes: </h1>
+          <h1 className="title">Welcome, {user.email}!</h1>
+            <h1 className="second">Browse our Catalogue of Homes: </h1>
             <Wrapper>
       {homes.length > 0 ? (
         homes.map((home) => (
