@@ -7,19 +7,12 @@
   margin: 5rem 0;
   max-width: calc(980vw - 2rem);
 }
-.carousel-image{
 
-
-
-
-
-
-}
 .homeListListings {
   height: 490px;
-  top:89px;
+  top:14px;
   width: absolute;
-  position: sticky;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -70,7 +63,8 @@ ul {
   width: relative;
   position: relative;
   text-align: center;
-  top: -20px;
+  top: -29px;
+
 }
 p {
   font-size: 23px;

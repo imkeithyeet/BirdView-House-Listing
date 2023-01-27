@@ -1,8 +1,9 @@
 .dashListings {
     height: 250px;
-    width: relative
-    
+    width: relative; 
+   
 }
+
 
 .title{
     display: flex;

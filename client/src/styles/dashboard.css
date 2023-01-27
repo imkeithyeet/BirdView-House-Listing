@@ -1,9 +1,21 @@
 .H1{
-    position:relative;
+    position:relative !important;
     text-align: center;
     font: blue;
+    top:130px;
+    left:223px;
 }
 .H2{
     position:relative;
     text-align: center;
+    font-size: 45px;
+}
+p{
+    position:relative !important;
+    text-align: center;
+    top: 60px; 
+}
+H1{
+    position:relative;
+
 }

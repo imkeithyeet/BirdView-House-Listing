@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
+import "../styles/DarkMode.css";
 
 function NavBarLoggedIn({ user, setUser }) {
+
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -13,6 +15,7 @@ function NavBarLoggedIn({ user, setUser }) {
   }
 
   return (
+ 
     <Wrapper>
       <Logo>
         <Link to="/">BirdView</Link>
@@ -32,6 +35,7 @@ function NavBarLoggedIn({ user, setUser }) {
           </Button>
         </Nav>
     </Wrapper>
+    
   );
 }
 
