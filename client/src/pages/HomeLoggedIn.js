@@ -135,22 +135,24 @@ function HomeLoggedIn({ user, setUser }) {
             {homewatches.length > 0
               ? homewatches.map((homewatch) => (
                   <Home key={homewatch.home_id}>
-                    <h1>{homewatch.home.address}</h1>
                     <Box>
                       <img
                         src={homewatch.home.photos[0].image_url}
                         alt={homewatch.home.bio}
                         className="homeListListings"
                       />
+                      <h2>{homewatch.home.address}</h2>
                       <ul>By {homewatch.user.username.toUpperCase()}</ul>
                       <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
-                    </Box>
+                      <div className= "ListingButton">
                     <Button as={Link} to={`/homes?id=${homewatch.home.id}`}>
                       View Full Listing
                     </Button>
                     <Button onClick={() => handleDeleteHomewatch(homewatch.id)}>
                       Remove From My Favorites
                     </Button>
+                    </div>
+                    </Box>
                   </Home>
                 ))
               : null}
@@ -160,19 +162,21 @@ function HomeLoggedIn({ user, setUser }) {
             {homes.length > 0 ? (
               homes.map((home) => (
                 <Home key={home.id}>
-                  <h1>{home.address}</h1>
                   <Box>
                     <img
                       src={home.photos.map((photo) => photo.image_url)}
                       alt={home.bio}
                       className="homeListListings"
                     />
+                    <h2>{home.address}</h2>
                     <ul>By {home.user.username.toUpperCase()}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
-                  </Box>
+                    <div className= "ListingButton">
                   <Button as={Link} to={`/homes?id=${home.id}`}>
                     View Full Listing
                   </Button>
+                  </div>
+                  </Box>
                 </Home>
               ))
             ) : (

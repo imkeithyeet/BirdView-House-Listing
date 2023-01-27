@@ -14,6 +14,7 @@
   left: 0;
   margin: 5rem 0;
   max-width: calc(980vw - 2rem);
+  text-align: center;
 }
 .homeListListings {
   height: 490px;
