@@ -128,7 +128,7 @@ function HomeLoggedIn({ user, setUser }) {
           <h2>
             {`You have `}
             <Link to="/dashboard">{user.offer_count}</Link>
-            {user.offer_count == 1 ? ' offer on your Listings' : ' offers on your Listings'}
+            {user.offer_count === 1 ? ' offer on your Listings' : ' offers on your Listings'}
           </h2>
           <h2>Your Personal Favorites:</h2>
           <Wrapper className="homelist-loggedin">
@@ -143,9 +143,10 @@ function HomeLoggedIn({ user, setUser }) {
                       />
                       <h2>{homewatch.home.address}</h2>
                       <ul>By {homewatch.user.username.toUpperCase()}</ul>
+                
                       <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
-                      <div className= "ListingButton">
-                    <Button as={Link} to={`/homes?id=${homewatch.home.id}`}>
+                      <div className="ListingButton">
+                      <Button  as={Link} to={`/homes?id=${homewatch.home.id}`}>
                       View Full Listing
                     </Button>
                     <Button onClick={() => handleDeleteHomewatch(homewatch.id)}>
@@ -171,8 +172,8 @@ function HomeLoggedIn({ user, setUser }) {
                     <h2>{home.address}</h2>
                     <ul>By {home.user.username.toUpperCase()}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
-                    <div className= "ListingButton">
-                  <Button as={Link} to={`/homes?id=${home.id}`}>
+                    <div className="ListingButton">
+                    <Button  as={Link} to={`/homes?id=${home.id}`}>
                     View Full Listing
                   </Button>
                   </div>

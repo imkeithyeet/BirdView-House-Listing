@@ -5,6 +5,10 @@ import React, { useState, useEffect } from "react";
 function Dashboard({ user, setUser }) {
     const [showEmail, setShowEmail] = useState({});
 
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
     useEffect(() => {
         if (user) {
             fetch("/users/" + user.id)
@@ -22,7 +26,7 @@ function Dashboard({ user, setUser }) {
             {user.homes && user.homes.map((home) => (
             <div>
                     <img
-                    src={home.photos && home.photos.map((photo) => photo.image_url)}
+                    src={home.photos && home.photos[0].image_url}
                     alt={home.bio}
                     className="dashListings"
                     />
@@ -30,7 +34,7 @@ function Dashboard({ user, setUser }) {
                 {user && home.offers && home.offers.map((offer, index) => {
                     return (
                         <div>Offers:
-                            <li>${offer.amount}</li>
+                            <li>${numberWithCommas(offer.amount)}</li>
                             <li>Offered By: {offer.user? offer.user.username : 'Not found'}</li>
                             <button onClick={()=>setShowEmail({...showEmail, [index]: !showEmail[index]})}>Respond</button>
                             {showEmail[index] ? <div>{offer.user.email}</div> : ""}
