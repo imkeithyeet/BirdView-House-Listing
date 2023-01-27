@@ -17,7 +17,7 @@ function Dashboard({ user, setUser }) {
                     setUser(data);
                 });
         }
-    },);
+    },[]);
 
     return (
         <>
