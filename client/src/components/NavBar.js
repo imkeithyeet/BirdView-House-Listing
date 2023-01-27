@@ -33,7 +33,7 @@ function NavBar({ user, setUser }) {
           <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/>
           </Link>
         </Logo>
-        <Nav>
+        <Nav className="nav">
           <Button as={Link} to="/about">
             About
           </Button>

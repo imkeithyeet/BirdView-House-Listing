@@ -7,17 +7,19 @@
   position: sticky;
   top: 2px;
   z-index: 999;
+  top: 21px;
 }
 
 .navbar-active {
   background:transparent;
-  height: 73px;
+  height: 79px;
   display: flex;
   justify-content: left;
   align-items: center;
   position: sticky;
   top: 0px;
   z-index: 1000;
+  bottom: 650px;
 }
 .container{
   position: relative;
@@ -32,11 +34,11 @@
 }
 .nav{
   position: relative;
-  padding-right: 20px;
-  top:3em;
+  padding-right: 29px;
+  top:7px;
 }
 .logo{
   position: absolute;
-  top:0.9em;
+  top:0.5em;
   left: 22px;
 }
