@@ -2,3 +2,24 @@
     height: 250px;
     width: relative
 }
+.listing{
+    position: relative;
+    left: 302px;
+    padding-bottom: 20px;
+}
+P{
+    position: relative;
+    padding-bottom: 20px;
+}
+.W{
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    top: 45px;
+}
+.O{
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    top: 30px;
+}

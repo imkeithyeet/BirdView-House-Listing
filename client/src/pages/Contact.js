@@ -13,7 +13,7 @@ function Contact() {
                     <label>email</label>
                     <input  placeholder="Email" type="text" name="email" />
                     <label>Message</label>
-                    <textarea placeholder="Message" type="text" name="message" />
+                    <input className="Message" placeholder="Message" type="text" name="message" />
                     <div>
                         <button className="Send" type="submit">Send Message</button>
                     </div>

@@ -10,6 +10,7 @@ User.destroy_all
 Photo.destroy_all
 Home.destroy_all
 Offer.destroy_all
+Homewatch.destroy_all
 
 puts "Seeding users..."
 u1 = User.create(username:"caitlinhouse", email: 'Caitlin@gmail.com', password: "1234")
