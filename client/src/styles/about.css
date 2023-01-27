@@ -1,13 +1,14 @@
 .H5{
-    position: relative;
+    position: fixed;
     text-align: center;
     font-size: 60px;
-    top: 150px;
+    top: 90px;
+   left: 739px;
 
     
 }
 .p1{
-     position: absolute;
+    position: fixed;
     font-size: 30px;
     top: 740px;
     padding-left:400px;
@@ -16,10 +17,15 @@
 
 }
 .P{
-     position: relative;
+    position: fixed;
     font-size: 30px;
-    top:760px;
+    top: 900px;
+   left: 659px;
     padding:-29px;
+    min-width: 250px;
+
+
+    
 
 }
 .Img{
@@ -27,10 +33,10 @@
     margin: auto;
     display: block;
     border-radius: 20px;
-    position: absolute;
-    left: 660px;
+    position: fixed;
+    left: 600px;
     max-width: none;
-    top: 330px;
+    top: 280px;
 
 
   
