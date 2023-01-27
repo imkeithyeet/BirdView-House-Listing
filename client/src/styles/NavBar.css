@@ -10,7 +10,7 @@
 }
 
 .navbar-active {
-  background: white;
+  background:transparent;
   height: 73px;
   display: flex;
   justify-content: left;
