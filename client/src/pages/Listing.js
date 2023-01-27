@@ -72,13 +72,6 @@ function Listing({ user, onDeleteHomewatch, homewatches }) {
       >
         ❤️
       </button>
-      {/* <button
-        onClick={() => {
-          onDeleteHomewatch(home.id);
-        }}
-      >
-        💔
-      </button> */}
       {formVisible && (
         <form onSubmit={(event) => handleCreateOffer(event)}>
           <input
