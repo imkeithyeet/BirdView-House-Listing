@@ -15,7 +15,7 @@ import { BrowserRouter } from "react-router-dom";
 //   }
 // const GlobalStyle = createGlobalStyle`
 //   *,
-//   *::before, 
+//   *::before,
 //   *::after {
 //     box-sizing: border-box;
 //   }

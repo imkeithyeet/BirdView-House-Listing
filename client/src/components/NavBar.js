@@ -30,10 +30,10 @@ function NavBar({ user, setUser }) {
       <Wrapper>
         <Logo>
           <Link to="/" className="logo">
-            BirdView
+          <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/>
           </Link>
         </Logo>
-        <Nav>
+        <Nav className="nav">
           <Button as={Link} to="/about">
             About
           </Button>
@@ -57,16 +57,18 @@ const Wrapper = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-family: Chunkfive, sans;
-  font-size: 3rem;
-  color: CadetBlue;
-  margin: 0;
-  line-height: 1;
-  text-shadow: 1px 1px 1px;
-  display: inline-block;
-  width: 100%;
+  // font-family: Chunkfive, sans;
+  // font-size: 3rem;
+  // color: CadetBlue;
+  // margin: 0;
+  // line-height: 1;
+  // text-shadow: 1px 1px 1px;
+  // display: inline-block;
+  // width: 100%;
   // text-align: left;
-
+  //  top: 70px;  
+  //  left: 15%;
+  //  border-radius: 50%;
   a {
     color: inherit;
     text-decoration: none;
@@ -80,5 +82,6 @@ const Nav = styled.nav`
   position: absolute;
   right: 8px;
 `;
+
 
 export default NavBar;

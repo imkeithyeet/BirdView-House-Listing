@@ -6,7 +6,7 @@ class OffersController < ApplicationController
     end
 
     def show
-        offer = Offer.find_by(id: params[:id])
+        offer = find_offer
         render json: offer, include: ['user']
     end
 
@@ -16,8 +16,23 @@ class OffersController < ApplicationController
         render json: offer, status: :created
     end
 
+    def update
+        offer = find_offer
+        offer.update!(offer_params)
+        render json: offer, status: :updated
+    end
+
+    def destroy
+        offer = find_offer
+        offer.destroy
+        head :no_content
+    end
 
     private
+
+    def find_offer
+        Offer.find_by(id: params[:id])
+    end
 
     def offer_params
         params.permit(:amount, :user, :home, :home_id)

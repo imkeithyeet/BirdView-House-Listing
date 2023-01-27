@@ -33,7 +33,7 @@
     flex-direction: column;
     padding:1rem
 } 
-input, textarea{
+input{
     font-size: 1rem;
     border:2px solid;
     background-color: rgb(255, 255, 255);
@@ -53,4 +53,8 @@ input, textarea{
     
 }
 
+.Message{
+    height: 700px;
+    font-size: 20px; 
 
+}

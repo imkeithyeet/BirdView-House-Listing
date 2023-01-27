@@ -1,11 +1,15 @@
-import { useEffect, useReducer, useState } from "react";
-import "../styles/Listing.css";
+import { useEffect, useState } from "react";
+import "../styles/Listing.css"
+import { Error, FormField, Label, Textarea } from "../styles";
+import { useHistory } from "react-router-dom";
 
-function Listing({ user, onDeleteHomewatch, homewatches }) {
-  const [home, setHome] = useState([]);
-  const [amount, setAmount] = useState(0);
-  const id = new URLSearchParams(window.location.search).get("id");
-  const [formVisible, setFormVisible] = useState(false);
+function Listing({ user, onOffer }) {
+    const [home, setHome] = useState([]);
+    const [amount, setAmount] = useState("");
+    const id = new URLSearchParams(window.location.search).get('id')
+    const [formVisible, setFormVisible] = useState(false);
+    const [errors, setErrors] = useState([]);
+    const history = useHistory();
 
   useEffect(() => {
     fetch(`/homes/${id}`)
@@ -13,19 +17,25 @@ function Listing({ user, onDeleteHomewatch, homewatches }) {
       .then(setHome);
   }, []);
 
-  function handleCreateOffer(event) {
-    event.preventDefault();
-    fetch(`/homes/${id}/offers`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ amount: amount }),
-    })
-      .then((r) => r.json())
-      .then(console.log);
-  }
+    function handleCreateOffer(event) {
+        event.preventDefault();
+        fetch(`/homes/${id}/offers`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({ amount })
+        })
+        .then((r) => {
+            if (r.ok) {
+                r.json().then((user) => onOffer(user));
+                history.push('/');
+            } else {
+                r.json().then((err) => setErrors(err.errors));
+            }
+        });
+    }
 
   function handleCreateHomewatch() {
     fetch(`/homewatches`, {
