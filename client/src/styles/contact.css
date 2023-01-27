@@ -22,7 +22,10 @@
     right: 2px;
     top: 12px;
     filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
-
+    width: 10em;  
+    height: 2em;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #535353;
 
 }
 .Form{

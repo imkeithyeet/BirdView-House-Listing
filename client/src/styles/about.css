@@ -18,17 +18,21 @@
 .P{
      position: relative;
     font-size: 30px;
-    top: 450px;
-    padding:10px;
+    top:760px;
+    padding:-29px;
 
 }
 .Img{
-   display: block;
-   margin-left: auto;
-    margin-right: auto;
-   width: 28%;
-  border-radius: 7px;
-  bottom: 400px;
+    width:30%;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    position: absolute;
+    left: 660px;
+    max-width: none;
+    top: 330px;
 
 
-}
+  
+ 
+ }

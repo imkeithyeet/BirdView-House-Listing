@@ -10,8 +10,7 @@ function HomeCarousel({ homes }) {
           className="carousel-image"
           src={photo.image_url}
           alt={photo.description}
-          width="700" 
-          height="1000"
+  
         />
         {/* <p className="carousel-caption">{photo.description}</p> */}
       </div>
