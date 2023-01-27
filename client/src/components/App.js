@@ -27,11 +27,11 @@ function App() {
 
   if (!user) return (
     <>
-      <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
       <main className={darkMode ? "dark-mode" : "light-mode"}>
+      <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
+
         <Switch> 
           <Route path="/about">
-            
             <About />
           </Route>
           <Route path="/login">
