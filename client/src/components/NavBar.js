@@ -43,7 +43,7 @@ function NavBar({ user, setUser, darkMode, setDarkMode}) {
         </div>
         <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
       </div>
-        <Nav>
+        <Nav className="nav">
           <Button as={Link} to="/about">
             About
           </Button>
