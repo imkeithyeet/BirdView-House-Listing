@@ -7,6 +7,7 @@ function SignUpForm({ onLogin }) {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [username, setUsername] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -18,6 +19,7 @@ function SignUpForm({ onLogin }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        username,
         email,
         password,
         password_confirmation: passwordConfirmation,
@@ -34,6 +36,16 @@ function SignUpForm({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <FormField>
+        <Label htmlFor="username">Username</Label>
+        <Input
+          type="text"
+          id="username"
+          autoComplete="off"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </FormField>
       <FormField>
         <Label htmlFor="email">Email</Label>
         <Input
