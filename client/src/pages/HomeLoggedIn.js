@@ -114,7 +114,7 @@ function HomeLoggedIn({ user, setUser }) {
             <h1>{home.address}</h1>
             <Box>
               <img
-                src={home.photos.map((photo) => photo.image_url)}
+                src={home.photos[0].image_url}
                 alt={home.bio}
                 className="homeListListings"
               />

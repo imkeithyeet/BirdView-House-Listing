@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles/Listing.css"
 import { Error, FormField, Label, Textarea } from "../styles";
 import { useHistory } from "react-router-dom";
+import ListingCarousel from "../components/ListingCarousel.js"
 
 function Listing({ user, onOffer }) {
     const [home, setHome] = useState([]);
@@ -40,17 +41,19 @@ function Listing({ user, onOffer }) {
 
     if (!user) return (
         <>
-            <img className="ListingPic" src={home.photos && home.photos.map((photo) => photo.image_url)} />
+            <img className="ListingPic" src={home && home.photos && home.photos[0].image_url} />
                 <div>{home && home.address}</div>
             <h1>Being sold by: {home.user && home.user.username}</h1>
+            <ListingCarousel home={home} />
         </>
     )
 
     return (
         <>
-            <img className="ListingPic" src={home.photos && home.photos.map((photo) => photo && photo.image_url)} />
+            <img className="ListingPic" src={home.photos && home.photos[0].image_url} />
                 <div>{home && home.address}</div>
             <h1>Being sold by: {home.user && home.user.username}</h1>
+            <ListingCarousel home={home} />
             <button onClick={() => setFormVisible(!formVisible)}>
                 {formVisible ? 'Cancel' : 'Place an Offer'}
             </button>

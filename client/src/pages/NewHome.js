@@ -12,6 +12,10 @@ function NewHome({ user, setUser }) {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -94,7 +98,7 @@ function NewHome({ user, setUser }) {
       <WrapperChild>
         <h1>{address}</h1>
         <p>
-          <em>Asking: ${price}</em>
+          <em>Asking: ${numberWithCommas(price)}</em>
           &nbsp;·&nbsp;
           <cite>Listed by: {user.email}</cite>
         </p>
