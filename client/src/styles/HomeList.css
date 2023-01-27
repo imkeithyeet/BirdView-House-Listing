@@ -7,8 +7,7 @@
   margin: 5rem 0;
   max-width: calc(980vw - 2rem);
 }
-
-.homeLoggedList {
+.homelist-loggedin {
   position: relative;
   display: flex;
   overflow-x: auto;
@@ -16,7 +15,6 @@
   margin: 5rem 0;
   max-width: calc(980vw - 2rem);
 }
-
 .homeListListings {
   height: 490px;
   width: absolute;
@@ -24,8 +22,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding-bottom:100px;
-  
+  padding-bottom: 100px;
 }
 ul {
   font-size: 30px;
