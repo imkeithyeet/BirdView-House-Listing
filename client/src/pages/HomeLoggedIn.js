@@ -75,9 +75,9 @@ function HomeLoggedIn({ user, setUser }) {
     <Wrapper>
       {user && (
         <div>
-          <h1>Welcome, {user.username}!</h1>
+          <h1 className="W">Welcome, {user.username}!</h1>
           <div></div>
-          <h2>Offers you have made: </h2>
+          <h2 className="O">Offers you have made: </h2>
             {user && user.offers && user.offers.length ? user.offers.map((offer, index) => {
               return (
                 <div key={offer.id}>
@@ -118,7 +118,7 @@ function HomeLoggedIn({ user, setUser }) {
                 alt={home.bio}
                 className="homeListListings"
               />
-              <ul>By {home.user.email}</ul>
+              <ul>By {home.user.username}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
               <Button className="listing" as={Link} to={`/homes?id=${home.id}`} >
               View Full Listing

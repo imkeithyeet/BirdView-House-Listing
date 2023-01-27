@@ -7,7 +7,7 @@
 .p1{
      position: absolute;
     font-size: 30px;
-    top: 740px;
+    top: 800px;
     padding-left:400px;
     padding-right:400px;
   
@@ -25,5 +25,6 @@
     margin-right: auto;
    width: 27%;
   border-radius: 7px;
+  top: 800px;
 
 }
