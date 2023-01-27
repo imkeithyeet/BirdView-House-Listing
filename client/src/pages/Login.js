@@ -17,7 +17,7 @@ function Login({ onLogin }) {
         <>
           <LoginForm onLogin={onLogin} />
           <Divider />
-          <p>
+          <p className="S">
             Don't have an account? &nbsp;
             <Button color="secondary" onClick={() => setShowLogin(false)}>
               Sign Up

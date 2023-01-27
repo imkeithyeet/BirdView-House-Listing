@@ -30,7 +30,7 @@ function NavBar({ user, setUser, darkMode, setDarkMode}) {
       <Wrapper>
         <Logo>
           <Link to="/" className="logo">
-            BirdView
+          <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/>
           </Link>
         </Logo>
         <div className="container">
@@ -75,7 +75,10 @@ const Logo = styled.h1`
   text-shadow: 1px 1px 1px;
   display: inline-block;
   width: 100%;
-  // text-align: left;
+  text-align: left;
+   top: 70px;  
+   left: 15%;
+   border-radius: 50%;
 
   a {
     color: inherit;
