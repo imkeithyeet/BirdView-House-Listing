@@ -3,37 +3,37 @@ import '../styles/dashboard.css';
 import React, { useState, useEffect } from "react";
 
 function Dashboard({ user, setUser }) {
-    const [isLoading, setIsLoading] = useState(true);
+    const [showEmail, setShowEmail] = useState({});
+
     useEffect(() => {
-        if (!user) {
-            // make API call to fetch user data
+        if (user) {
             fetch("/users/" + user.id)
                 .then((res) => res.json())
                 .then((data) => {
                     setUser(data);
-                    setIsLoading(false);
                 });
         }
     }, []);
+
     return (
         <>
         <h1 className="H1"style={{color: "DarkSlateGray"}} >Homes for Sale: </h1>
             <div>
-            {user.homes.map((home) => (
+            {user.homes && user.homes.map((home) => (
             <div>
-                {isLoading && <div>Loading..</div>}
                     <img
                     src={home.photos && home.photos.map((photo) => photo.image_url)}
                     alt={home.bio}
                     className="dashListings"
-                    onLoad={() => setIsLoading(false)}
                     />
                 <h3>{home.address}</h3>
-                {home.offers && home.offers.map((offer) => {
+                {user && home.offers && home.offers.map((offer, index) => {
                     return (
                         <div>Offers:
                             <li>${offer.amount}</li>
-                            <li>Offered By: {offer.user && offer.user.username}</li>
+                            <li>Offered By: {offer.user? offer.user.username : 'Not found'}</li>
+                            <button onClick={()=>setShowEmail({...showEmail, [index]: !showEmail[index]})}>Respond</button>
+                            {showEmail[index] ? <div>{offer.user.email}</div> : ""}
                         </div>
                     )
                 })}

@@ -8,7 +8,6 @@ function Contact() {
                 <h1 className="H3"style={{color: "CadetBlue"}}>Contact Us</h1>
                 <p1 className="P1" style={{color: "black", padding:"20px"}}>Send Us a Message Today:</p1>
                 <form className="Form"style={{color: "black"}}>
-
                     <label>Name:</label>
                     <input  placeholder="Name..." type="text" name="name" />
                     <label>email</label>
