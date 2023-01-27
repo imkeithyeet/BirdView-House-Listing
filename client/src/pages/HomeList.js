@@ -38,7 +38,7 @@ function HomeList() {
                   alt={home.bio}
                   className="homeListListings"
                 />
-                <ul>By {home.user.email}</ul>
+                <ul>By {home.user.username}</ul>
                 <ReactMarkdown>{home.bio}</ReactMarkdown>
                 <ul className="Price">${numberWithCommas (home.price)}</ul>
                 <div className= "ListingButton">
