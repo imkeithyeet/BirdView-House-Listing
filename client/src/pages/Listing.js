@@ -1,7 +1,7 @@
 import { useEffect, useReducer, useState } from "react";
 import "../styles/Listing.css";
 
-function Listing({ user }) {
+function Listing({ user, onDeleteHomewatch, homewatches }) {
   const [home, setHome] = useState([]);
   const [amount, setAmount] = useState(0);
   const id = new URLSearchParams(window.location.search).get("id");
@@ -72,6 +72,13 @@ function Listing({ user }) {
       >
         ❤️
       </button>
+      {/* <button
+        onClick={() => {
+          onDeleteHomewatch(home.id);
+        }}
+      >
+        💔
+      </button> */}
       {formVisible && (
         <form onSubmit={(event) => handleCreateOffer(event)}>
           <input

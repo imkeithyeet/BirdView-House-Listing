@@ -8,7 +8,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
-import Listing from "../pages/Listing"
+import Listing from "../pages/Listing";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,30 +21,31 @@ function App() {
     });
   }, []);
 
-  if (!user) return (
-    <>
-      <NavBar />
-      <main>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/login">
-            <Login onLogin={setUser} />
+  if (!user)
+    return (
+      <>
+        <NavBar />
+        <main>
+          <Switch>
+            <Route path="/about">
+              <About />
             </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/homes">
-            <Listing  />
-          </Route>
-          <Route path="/">
-            <HomeList />
-          </Route>
-        </Switch>
-      </main>
-    </>
-  );
+            <Route path="/login">
+              <Login onLogin={setUser} />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/homes">
+              <Listing />
+            </Route>
+            <Route path="/">
+              <HomeList />
+            </Route>
+          </Switch>
+        </main>
+      </>
+    );
 
   return (
     <>

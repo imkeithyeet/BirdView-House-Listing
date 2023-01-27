@@ -11,6 +11,12 @@ class HomewatchesController < ApplicationController
         render json: homewatch, status: :created
     end
 
+    def destroy
+        homewatch = Homewatch.find_by(id: params[:id])
+        homewatch.destroy
+        head :no_content
+    end
+
     private
     
     def homewatch_params

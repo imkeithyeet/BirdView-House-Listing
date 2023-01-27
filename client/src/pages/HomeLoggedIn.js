@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Box, Button } from "../styles";
 import "../styles/HomeLoggedIn.css";
 
-function HomeLoggedIn({ user }) {
+function HomeLoggedIn({ user, onDeleteHomewatch }) {
   const [homes, setHomes] = useState([]);
   const [homewatches, setHomewatches] = useState([]);
 
@@ -20,6 +20,24 @@ function HomeLoggedIn({ user }) {
       .then((r) => r.json())
       .then(setHomewatches);
   }, [user]);
+
+  function handleDeleteHomewatch(id) {
+    fetch(`/homewatches/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (res.ok) {
+          const updatedWatches = homewatches.filter(
+            (homewatch) => homewatch.id !== id
+          );
+          setHomewatches(updatedWatches);
+        } else {
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <Wrapper>
@@ -39,7 +57,14 @@ function HomeLoggedIn({ user }) {
                         className="homeListListings"
                       />
                       <ul>By {homewatch.user.username.toUpperCase()}</ul>
+                      <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
                     </Box>
+                    <Button as={Link} to={`/homes?id=${homewatch.home.id}`}>
+                      View Full Listing
+                    </Button>
+                    <Button onClick={() => handleDeleteHomewatch(homewatch.id)}>
+                      Remove From My Favorites
+                    </Button>
                   </Home>
                 ))
               : null}
