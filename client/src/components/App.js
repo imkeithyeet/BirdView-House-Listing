@@ -61,10 +61,10 @@ function App() {
             <About />
           </Route>
           <Route path="/homes">
-            <Listing user={user} />
+            <Listing user={user} onOffer={setUser} />
           </Route>
           <Route path="/">
-            <HomeLoggedIn user={user} />
+            <HomeLoggedIn user={user} setUser={setUser} />
           </Route>
         </Switch>
       </main>

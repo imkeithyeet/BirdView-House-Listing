@@ -7,6 +7,16 @@
   margin: 5rem 0;
   max-width: calc(980vw - 2rem);
 }
+
+.homeLoggedList {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  left: 0;
+  margin: 5rem 0;
+  max-width: calc(980vw - 2rem);
+}
+
 .homeListListings {
   height: 490px;
   width: absolute;

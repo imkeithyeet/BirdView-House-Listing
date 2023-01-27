@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
+import "../styles/NavBar.css";
 
 function NavBarLoggedIn({ user, setUser }) {
+  const [navBar, setNavBar] = useState(false);
+
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -12,26 +15,38 @@ function NavBarLoggedIn({ user, setUser }) {
     });
   }
 
+  const changeBackground = () => {
+    if (window.scrollY >= 25) {
+      setNavBar(true);
+    } else {
+      setNavBar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <Wrapper>
-      <Logo>
-        <Link to="/">BirdView</Link>
-      </Logo>
-        <Nav>
-          <Button as={Link} to="/dashboard">
-            Dashboard
-          </Button>
-          <Button as={Link} to="/about">
-            About
-          </Button>
-          <Button as={Link} to="/contact">
-            Contact
-          </Button>
-          <Button variant="outline" onClick={handleLogoutClick}>
-            Logout
-          </Button>
-        </Nav>
-    </Wrapper>
+    <nav className={navBar ? "navbar-active" : "navbar"}>
+      <Wrapper>
+        <Logo>
+          <Link to="/">BirdView</Link>
+        </Logo>
+          <Nav>
+            <Button as={Link} to="/dashboard">
+              Dashboard
+            </Button>
+            <Button as={Link} to="/about">
+              About
+            </Button>
+            <Button as={Link} to="/contact">
+              Contact
+            </Button>
+            <Button variant="outline" onClick={handleLogoutClick}>
+              Logout
+            </Button>
+          </Nav>
+      </Wrapper>
+    </nav>
   );
 }
 

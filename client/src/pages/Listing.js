@@ -1,11 +1,16 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Listing.css"
+import { Error, FormField, Label, Textarea } from "../styles";
+import { useHistory } from "react-router-dom";
 
-function Listing({ user }) {
+function Listing({ user, onOffer }) {
     const [home, setHome] = useState([]);
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState("");
     const id = new URLSearchParams(window.location.search).get('id')
     const [formVisible, setFormVisible] = useState(false);
+    const [errors, setErrors] = useState([]);
+    const history = useHistory();
+
 
     useEffect(() => {
         fetch(`/homes/${id}`)
@@ -21,10 +26,16 @@ function Listing({ user }) {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify({ amount: amount })
+            body: JSON.stringify({ amount })
         })
-        .then((r) => r.json())
-        .then(console.log);
+        .then((r) => {
+            if (r.ok) {
+                r.json().then((user) => onOffer(user));
+                history.push('/');
+            } else {
+                r.json().then((err) => setErrors(err.errors));
+            }
+        });
     }
 
     if (!user) return (
@@ -46,7 +57,12 @@ function Listing({ user }) {
             {formVisible && (
             <form onSubmit={event => handleCreateOffer(event)}>
                 <input type="text" value={amount} placeholder="amount..." onChange={e => setAmount(e.target.value)} />
-                <button type="submit">Submit</button>
+                <button type="submit" onClick={onOffer} >Submit</button>
+                <FormField>
+                    {errors.map((err) => (
+                        <Error key={err}>{err}</Error>
+                    ))}
+                </FormField>
             </form>
         )}
         </>
