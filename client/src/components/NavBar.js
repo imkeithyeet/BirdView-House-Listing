@@ -26,7 +26,9 @@ function NavBar({ user, setUser, darkMode, setDarkMode}) {
   window.addEventListener("scroll", changeBackground);
 
   return (
+    
     <nav className={navBar ? "navbar-active" : "navbar"}>
+      
       <Wrapper>
         <Logo>
           <Link to="/" className="logo">
@@ -56,6 +58,7 @@ function NavBar({ user, setUser, darkMode, setDarkMode}) {
         </Nav>
       </Wrapper>
     </nav>
+    
   );
 }
 

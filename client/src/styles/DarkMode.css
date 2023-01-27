@@ -5,7 +5,7 @@
   }
   #root {
     height: 100%;
-        left:20px;
+    left:20px;
   }
   
   html,
@@ -13,7 +13,6 @@
     min-height: 100vh;
     height: 100%;
 
-  
   }
   
   span {
@@ -56,13 +55,6 @@
   
 
   
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-
-  }
-  
   .slider {
     position: absolute;
     cursor: pointer;
@@ -80,13 +72,12 @@
     content: "";
     height: 26px;
     width: 26px;
-    top:-6px;
-    left: 3px;
-    bottom: 4px;
-    background-color:cadetblue;
+    left: 4px;
+    top: -6px;
+    background-color: cadetblue;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+    }
   
   input:checked + .slider {
     background-color: #19a2c1;
@@ -113,3 +104,4 @@
   .switch-checkbox {
     padding: 10px
   }
+ 

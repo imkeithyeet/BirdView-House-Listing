@@ -9,8 +9,11 @@ import Contact from "../pages/Contact";
 import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
 import Listing from "../pages/Listing"
-// import DarkMode from "./DarkMode";
 import "../styles/DarkMode.css";
+import Footer from "./Footer";
+import "../styles/FooterStyles.css";
+
+
 
 
 function App() {
@@ -28,8 +31,8 @@ function App() {
   if (!user) return (
     <>
       <main className={darkMode ? "dark-mode" : "light-mode"}>
+        <div>
       <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
-
         <Switch> 
           <Route path="/about">
             <About />
@@ -47,12 +50,15 @@ function App() {
             <HomeList />
           </Route>
         </Switch>
+        </div>
+        <Footer />
       </main>
     </>
   );
 
   return (
     <>
+
       <NavBarLoggedIn user={user} setUser={setUser} />
       <main>
         <Switch>
@@ -71,8 +77,12 @@ function App() {
           <Route path="/">
             <HomeLoggedIn user={user} />
           </Route>
+          <Footer />
         </Switch>
+        <Footer  />
+
       </main>
+
     </>
   );
 }
