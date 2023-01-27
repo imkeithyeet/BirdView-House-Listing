@@ -44,7 +44,7 @@ function HomeLoggedIn({ user, onDeleteHomewatch }) {
       {user && (
         <div>
           <h1>Welcome, {user.username.toUpperCase()}!</h1>
-          <h2>Your Personal Favorites</h2>
+          <h2>Your Personal Favorites:</h2>
           <Wrapper className="homelist-loggedin">
             {homewatches.length > 0
               ? homewatches.map((homewatch) => (
