@@ -31,14 +31,16 @@
 }
 .rounded-corners{
   border-radius: 6px 6px 6px;
+
+
 }
 .nav{
   position: relative;
   padding-right: 29px;
-  top:7px;
+  top:15px;
 }
 .logo{
   position: absolute;
-  top:0.5em;
+  top:0.01em;
   left: 22px;
 }

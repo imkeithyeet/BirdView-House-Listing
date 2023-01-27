@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
 import "../styles/NavBar.css";
+import "../styles/NavBarLoggedIn.css";
+
 
 function NavBarLoggedIn({ user, setUser }) {
   const [navBar, setNavBar] = useState(false);
@@ -27,9 +29,9 @@ function NavBarLoggedIn({ user, setUser }) {
 
   return (
     <nav className={navBar ? "navbar-active" : "navbar"}>
-      <Wrapper>
+      <Wrapper className="Links">
         <Logo>
-          <Link to="/">BirdView</Link>
+        <Link to="/"> <img src="../images/logo.png" alt="logo" width={116} height={116} className="Rounded-corners"/></Link>
         </Logo>
           <Nav>
             <Button as={Link} to="/dashboard">
@@ -60,16 +62,23 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: Chunkfive, sans;
   font-size: 3rem;
-  color: CadetBlue	;
+  color: CadetBlue;
   margin: 0;
   line-height: 1;
+  text-shadow: 1px 1px 1px;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+   top: 30px;  
+   left:0.4em;
+   border-radius: 50%;
 
   a {
-    color: inherit;
-    text-decoration: none;
+    // color: inherit;
+    // text-decoration: none;
+    // position: relative;
   }
 `;
-
 const Nav = styled.nav`
   display: flex;
   gap: 4px;

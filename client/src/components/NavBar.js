@@ -57,18 +57,18 @@ const Wrapper = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-family: Chunkfive, sans;
-  font-size: 3rem;
-  color: CadetBlue;
-  margin: 0;
-  line-height: 1;
-  text-shadow: 1px 1px 1px;
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-   top: 70px;  
-   left: 15%;
-   border-radius: 50%;
+  // font-family: Chunkfive, sans;
+  // font-size: 3rem;
+  // color: CadetBlue;
+  // margin: 0;
+  // line-height: 1;
+  // text-shadow: 1px 1px 1px;
+  // display: inline-block;
+  // width: 100%;
+  // text-align: left;
+  //  top: 70px;  
+  //  left: 15%;
+  //  border-radius: 50%;
   a {
     color: inherit;
     text-decoration: none;
