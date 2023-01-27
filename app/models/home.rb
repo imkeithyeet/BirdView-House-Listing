@@ -3,5 +3,5 @@ class Home < ApplicationRecord
   has_many :offers
   has_many :users, through: :offers
   has_many :photos, dependent: :destroy
-  # has_many :homewatches
+  has_many :homewatches
 end

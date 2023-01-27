@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :homewatches, only: [:index, :create]
   resources :offers
   resources :photos
   resources :homes, only: [:index, :show, :create]
