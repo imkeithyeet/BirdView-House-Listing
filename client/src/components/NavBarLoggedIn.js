@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
 import "../styles/DarkMode.css";
+import "../styles/NavBarLoggedIn.css";
+
 
 function NavBarLoggedIn({ user, setUser }) {
 
@@ -18,9 +20,9 @@ function NavBarLoggedIn({ user, setUser }) {
  
     <Wrapper>
       <Logo>
-        <Link to="/">BirdView</Link>
+        <Link to="/"> <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/></Link>
       </Logo>
-        <Nav>
+        <Nav className="Nav">
           <Button as={Link} to="/dashboard">
             Dashboard
           </Button>
@@ -55,7 +57,10 @@ const Logo = styled.h1`
   text-shadow: 1px 1px 1px;
   display: inline-block;
   width: 100%;
-  // text-align: left;
+  text-align: left;
+   top: 30px;  
+   left:0.4em;
+   border-radius: 50%;
 
   a {
     color: inherit;
@@ -63,7 +68,6 @@ const Logo = styled.h1`
     position: relative;
   }
 `;
-
 
 const Nav = styled.nav`
   display: flex;

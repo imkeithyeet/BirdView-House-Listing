@@ -5,7 +5,7 @@
   justify-content: left;
   align-items: center;
   position: sticky;
-  top: 0px;
+  top: 2px;
   z-index: 999;
 }
 
@@ -29,4 +29,9 @@
 }
 .rounded-corners{
   border-radius: 3px 3px 3px;
+}
+.nav{
+  position: relative;
+  padding-right: 20px;
+  top:3em;
 }
