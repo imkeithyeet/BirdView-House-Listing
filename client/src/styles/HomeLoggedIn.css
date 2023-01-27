@@ -2,3 +2,12 @@
     height: 250px;
     width: relative
 }
+.listing{
+    position: relative;
+    left: 302px;
+    padding-bottom: 20px;
+}
+P{
+    position: relative;
+    padding-bottom: 20px;
+}

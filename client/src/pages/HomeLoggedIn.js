@@ -120,10 +120,11 @@ function HomeLoggedIn({ user, setUser }) {
               />
               <ul>By {home.user.email}</ul>
               <ReactMarkdown>{home.bio}</ReactMarkdown>
-            </Box>
-            <Button as={Link} to={`/homes?id=${home.id}`} >
+              <Button className="listing" as={Link} to={`/homes?id=${home.id}`} >
               View Full Listing
             </Button>
+            </Box>
+           
           </Recipe>
         ))
       ) : (
