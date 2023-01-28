@@ -41,16 +41,16 @@ function App() {
           <Switch>
             <Route path="/about">
               <About />
-              <button  className="toggle"onClick={toggleTheme}>Toggle Theme</button>
+              <button  className="toggle"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/login">
               <Login onLogin={setUser} />
-              <button  className="toggle"onClick={toggleTheme}>Toggle Theme</button>
+              <button  className="LogLight"onClick={toggleTheme}>🔆/🌙</button>
 
             </Route>
             <Route path="/contact">
               <Contact />
-              <button  className="Button"onClick={toggleTheme}>Toggle Theme</button>
+              <button  className="Button"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/homes">
               <Listing />

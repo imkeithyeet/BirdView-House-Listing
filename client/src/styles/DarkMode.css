@@ -18,7 +18,12 @@
     position: absolute;
      right: 250px;
     bottom: 600px;
-     border-radius: 30px 30px 30px;
+     border-radius: 30px 30px 30px; 
+}
 
-    
+.LogLight{
+    position: absolute;
+     right: 250px;
+    bottom: 570px;
+     border-radius: 30px 30px 30px; 
 }
