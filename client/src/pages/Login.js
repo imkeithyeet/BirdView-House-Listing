@@ -9,23 +9,9 @@ import "../styles/DarkMode.css";
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
-  const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-  if (theme === 'light') {
-    setTheme('dark');
-    } else {
-    setTheme('light');
-    }
-    };
-    useEffect(() => {
-      document.body.className = theme;
-        }, [theme]);
-    
   return (
     <Wrapper>
       <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
-      <button  className="buttonDark"onClick={toggleTheme}>🔆/🌙</button>
-
       </Logo>
       {showLogin ? (
         <>

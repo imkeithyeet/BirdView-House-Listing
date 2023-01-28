@@ -7,25 +7,25 @@
     color: rgb(0, 0, 0);
     }
 .Button{
-    position: absolute;
-     right: 272px;
-     bottom:684px;
-     border-radius: 30px 30px 30px;
+    position: fixed;
+    right: 400px;
+   bottom: -100px;
+    border-radius: 30px 30px 30px; 
 
     
 }
 .toggle{
     position: fixed;
-     right: 280px;
-    bottom: 850px;
+     right: 400px;
+    bottom: -100px;
      border-radius: 30px 30px 30px; 
 }
 
 .LogLight{
-    position: absolute;
-     right: 270px;
-    bottom: 574px;
-     border-radius: 30px 30px 30px; 
+    position: fixed;
+    right: 400px;
+   bottom: -100px;
+    border-radius: 30px 30px 30px; 
 }
 .LoggedInDark{
     position: fixed;

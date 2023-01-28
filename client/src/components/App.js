@@ -38,6 +38,7 @@ function App() {
       <>
         <NavBar />
         <main>
+        <button  className="contactDark"onClick={toggleTheme}>🔆/🌙</button>
           <Switch>
             <Route path="/about">
               <About />

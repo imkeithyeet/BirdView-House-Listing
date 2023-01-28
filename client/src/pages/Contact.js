@@ -1,24 +1,13 @@
-import React,{ useEffect, useState } from "react";
+import React from "react";
 
 import '../styles/contact.css';
 import "../styles/DarkMode.css";
 
 function Contact() {
 
-    const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-  if (theme === 'light') {
-    setTheme('dark');
-    } else {
-    setTheme('light');
-    }
-    };
-    useEffect(() => {
-      document.body.className = theme;
-        }, [theme]);
+  
     return (
             <body className="new" >
-            <button  className="contactDark"onClick={toggleTheme}>🔆/🌙</button>
                 <h1 className="H3">Contact Us</h1>
                 <form className="Form"style={{color: "black"}}>
                 <p1 className="P1" style={{color: "black", padding:"20px"}}>Send Us a Message Today:</p1>
