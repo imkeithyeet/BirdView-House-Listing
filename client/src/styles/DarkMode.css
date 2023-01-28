@@ -1,10 +1,10 @@
 .dark {
-    background-color: #333;
+    background-color: rgb(144, 138, 138);
     color: #fff;
     }
     .light {
     background-color: #fff;
-    color: #333;
+    color: rgb(0, 0, 0);
     }
 .Button{
     position: absolute;
