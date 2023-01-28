@@ -1,6 +1,8 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React, { useState } from "react";
+import "../styles/HomeCarousel.css";
+
 
 function HomeCarousel({ homes }) {
   const renderSlides = homes.map((home) =>
