@@ -34,13 +34,13 @@ function Dashboard({ user, setUser }) {
     return (
         <>
         <h1 className="H1" >Homes for Sale: </h1>
-        <button  className="LoggedInDark"onClick={toggleTheme}>🔆/🌙</button>
+        <button  className="Toggle"onClick={toggleTheme}>🔆/🌙</button>
             <div>
             {user.homes && user.homes.map((home) => (
             <div>
                     <img
                     className="dashListings"
-                    src={home.photo && home.photos[0].image_url}
+                    src={home.photos?.length > 0 && home.photos[0].image_url}
                     alt={home.bio}
                     />
                 <h3>{home.address}</h3>

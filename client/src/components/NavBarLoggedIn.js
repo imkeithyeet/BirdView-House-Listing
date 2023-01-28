@@ -31,7 +31,7 @@ function NavBarLoggedIn({ user, setUser }) {
     <nav className={navBar ? "navbar-active" : "navbar"}>
       <Wrapper className="Links">
         <Logo>
-        <Link to="/"> <img src="../images/logo.png" alt="logo" width={116} height={116} className="Rounded-corners"/></Link>
+        <Link to="/"> <img src="../images/logos.png" alt="logo" width={190} height={190} className="Rounded-corners"/></Link>
         </Logo>
           <Nav>
             <Button as={Link} to="/dashboard">

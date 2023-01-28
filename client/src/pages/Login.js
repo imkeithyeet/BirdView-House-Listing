@@ -1,15 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import { Button } from "../styles";
+import "../styles/DarkMode.css";
+
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+  if (theme === 'light') {
+    setTheme('dark');
+    } else {
+    setTheme('light');
+    }
+    };
+    useEffect(() => {
+      document.body.className = theme;
+        }, [theme]);
+    
   return (
     <Wrapper>
       <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
+      <button  className="buttonDark"onClick={toggleTheme}>🔆/🌙</button>
+
       </Logo>
       {showLogin ? (
         <>

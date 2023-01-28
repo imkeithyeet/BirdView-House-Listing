@@ -18,7 +18,7 @@ function Contact() {
         }, [theme]);
     return (
             <body className="new" >
-            <button  className="LoggedInDark"onClick={toggleTheme}>🔆/🌙</button>
+            <button  className="contactDark"onClick={toggleTheme}>🔆/🌙</button>
                 <h1 className="H3">Contact Us</h1>
                 <form className="Form"style={{color: "black"}}>
                 <p1 className="P1" style={{color: "black", padding:"20px"}}>Send Us a Message Today:</p1>
