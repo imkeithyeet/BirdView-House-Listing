@@ -164,9 +164,11 @@ function HomeLoggedIn({ user, setUser }) {
                       <Button  as={Link} to={`/homes?id=${homewatch.home.id}`}>
                       View Full Listing
                     </Button>
+                    <div className="remove">
                     <Button onClick={() => handleDeleteHomewatch(homewatch.id)}>
                       Remove From My Favorites
                     </Button>
+                    </div>
                     </div>
                     </Box>
                   </Home>
@@ -185,6 +187,7 @@ function HomeLoggedIn({ user, setUser }) {
                       className="homeListListings"
                     />
                     <h2>{home.address}</h2>
+                    <h2 className="money">${home.price}</h2>
                     <ul>By {home.user.username.toUpperCase()}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
                     <div className="ListingButton">
