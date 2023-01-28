@@ -114,7 +114,7 @@ function HomeLoggedIn({ user, setUser }) {
     <Wrapper>
       {user && (
         <div>
-          <button  className="LoggedInDark"onClick={toggleTheme}>🔆/🌙</button>
+          <button  className="Loggedindark"onClick={toggleTheme}>🔆/🌙</button>
           <h1>Welcome, {user.username.toUpperCase()}!</h1>
           <h2 className="O">Offers you have made: </h2>
             {user && user.offers && user.offers.length ? user.offers.map((offer, index) => {

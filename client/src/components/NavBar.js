@@ -30,7 +30,7 @@ function NavBar({ user, setUser }) {
       <Wrapper>
         <Logo>
           <Link to="/" className="logo">
-          <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/>
+          <img src="../images/logos.png" alt="logo" width={190} height={190} className="rounded-corners"/>
           </Link>
         </Logo>
         <Nav className="nav">
