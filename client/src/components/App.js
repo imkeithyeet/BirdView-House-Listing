@@ -46,7 +46,6 @@ function App() {
             <Route path="/login">
               <Login onLogin={setUser} />
               <button  className="LogLight"onClick={toggleTheme}>🔆/🌙</button>
-
             </Route>
             <Route path="/contact">
               <Contact />
