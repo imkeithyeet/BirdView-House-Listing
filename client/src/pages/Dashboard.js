@@ -26,7 +26,7 @@ function Dashboard({ user, setUser }) {
             {user.homes && user.homes.map((home) => (
             <div>
                     <img
-                    src={home.photos && home.photos[0].image_url}
+                    src={home.photo && home.photos[0].image_url}
                     alt={home.bio}
                     className="dashListings"
                     />
