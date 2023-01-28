@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button, FormField, Error } from "../styles";
 import "../styles/HomeLoggedIn.css"
+import "../styles/DarkMode.css";
+
 
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
@@ -12,7 +14,18 @@ function HomeLoggedIn({ user, setUser }) {
   const [errors, setErrors] = useState([]);
   const [showForm, setShowForm] = useState({});
   const [homewatches, setHomewatches] = useState([]);
-
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+  if (theme === 'light') {
+    setTheme('dark');
+    } else {
+    setTheme('light');
+    }
+    };
+    useEffect(() => {
+      document.body.className = theme;
+        }, [theme]);
+    
   useEffect(() => {
     if (user) {
         fetch("/users/" + user.id)
@@ -97,9 +110,11 @@ function HomeLoggedIn({ user, setUser }) {
   }
 
   return (
+    
     <Wrapper>
       {user && (
         <div>
+          <button  className="LoggedInDark"onClick={toggleTheme}>🔆/🌙</button>
           <h1>Welcome, {user.username.toUpperCase()}!</h1>
           <h2 className="O">Offers you have made: </h2>
             {user && user.offers && user.offers.length ? user.offers.map((offer, index) => {
