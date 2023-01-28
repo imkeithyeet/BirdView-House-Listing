@@ -14,13 +14,13 @@ Homewatch.destroy_all
 
 puts "Seeding users..."
 u1 = User.create(username:"caitlinhouse", email: 'Caitlin@gmail.com', password: "1234")
-u2 = User.create(username:"dreamfront", email: 'Lizzie@yahoo.com', password:"ilovechicken")
+u2 = User.create(username:"dreamfront", email: 'lizzie@yahoo.com', password:"ilovechicken")
 u3 = User.create(username:"hopes", email: 'Tom@hotmail.com', password:"dragonslayer")
 u4 = User.create(username: "immorganyeet", email: 'Morgan@gmail.com',password:"master")
 u5 = User.create(username:"dannydevito", email: 'Danny@gmail.com', password:"420")
 u6 = User.create(username: "familyhome", email: 'Peter@gmail.com', password:"sub")
-u7 = User.create(username: "bynes", email: 'Amanda@gmail.com', password:"hello")
-u8 = User.create(username:"jonasbrother", email: 'Nick@gmail.com', password:"morgan")
+u7 = User.create(username: "bynes", email: 'amanda@gmail.com', password:"hello")
+u8 = User.create(username:"jonasbrother", email: 'nick@gmail.com', password:"morgan")
 
 
 puts "Seeding homes..."
@@ -49,8 +49,6 @@ p11 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/532311d40333f0
 p12 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)
 p13 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/49ee3717d762ddc22fede71ffeef54da-uncropped_scaled_within_1536_1152.webp', description:  "Southern Escape", home:h5)
 p14 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/8576940c1a13546b01a016aa7fbbf98f-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)
-p15 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/60df0bb2105a0f895c4b254b04fefd9e-uncropped_scaled_within_1536_1152.webp', description:  "Closed Off Terrace", home:h7)
-p16 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e41ae85d9f1a4f6620c45a8f4adf5a3f-uncropped_scaled_within_1536_1152.webp', description: "Wooden Bliss", home:h8)
 
 
 puts "Seeding offers..."
