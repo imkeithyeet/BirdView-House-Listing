@@ -8,8 +8,17 @@
     }
 .Button{
     position: absolute;
-     right: 430px;
-     top: 400px;
+     right: 250px;
+     bottom:670px;
+     border-radius: 30px 30px 30px;
+
+    
+}
+.toggle{
+    position: absolute;
+     right: 250px;
+    bottom: 600px;
+     border-radius: 30px 30px 30px;
 
     
 }

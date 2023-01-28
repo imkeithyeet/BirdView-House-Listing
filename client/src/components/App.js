@@ -36,18 +36,21 @@ function App() {
   if (!user)
     return (
       <>
-
         <NavBar />
         <main>
           <Switch>
             <Route path="/about">
               <About />
+              <button  className="toggle"onClick={toggleTheme}>Toggle Theme</button>
             </Route>
             <Route path="/login">
               <Login onLogin={setUser} />
+              <button  className="toggle"onClick={toggleTheme}>Toggle Theme</button>
+
             </Route>
             <Route path="/contact">
               <Contact />
+              <button  className="Button"onClick={toggleTheme}>Toggle Theme</button>
             </Route>
             <Route path="/homes">
               <Listing />
@@ -65,8 +68,6 @@ function App() {
       <NavBarLoggedIn user={user} setUser={setUser} />
       <main>
     {/* <div className={`App ${theme}`}> */}
-    <button  className="Button"onClick={toggleTheme}>Toggle Theme</button>
-
         <Switch>
           <Route path="/dashboard">
             <Dashboard user={user} setUser={setUser} />
