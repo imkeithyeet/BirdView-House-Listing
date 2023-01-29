@@ -1,29 +1,53 @@
-import React from "react";
-
+import React, { useState } from "react";
 import '../styles/contact.css';
-import "../styles/DarkMode.css";
 
-function Contact() {
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/d7d78ef0-9ede-11ed-82c7-3d7607318e65"; // TODO - fill on the later step
 
-  
+const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = () => {
+    setTimeout(() => {
+      setSubmitted(true);
+    }, 100);
+  };
+
+  if (submitted) {
     return (
-            <body className="new" >
-                <h1 className="H3">Contact Us</h1>
-                <form className="Form"style={{color: "black"}}>
-                <p1 className="P1" style={{color: "black", padding:"20px"}}>Send Us a Message Today:</p1>
-                    <label>Name:</label>
-                    <input  className="Name" placeholder="Name..." type="text" name="name" />
-                    <label>Email</label>
-                    <input  placeholder="Email" type="text" name="email" />
-                    <label>Message</label>
-                    <input className="Message" placeholder="Message" type="text" name="message" />
-                    <div>
-                        <button className="Send" type="submit">Send Message</button>
-                    </div>
-                </form>
-                <p3 className= "P3"> By submitting your message and personal details you are permitting us to contact you by these means in response to your inquiry. </p3>
-            </body>
-    )
-}
+      <>
+        <h2 className="thank">Thank you!</h2>
+        <div className="soon">We'll be in touch soon.</div>
+      </>
+    );
+  }
+
+  return (
+    <form 
+      action={FORM_ENDPOINT}
+      onSubmit={handleSubmit}
+      method="POST"
+      target="_blank"
+    >
+        <div>
+        <h1 className="H3">Contact Us</h1>
+     </div>
+     <div>
+     <p1>Send Us a Message Today:</p1>
+     </div>
+      <div className="name">
+        <input type="text" placeholder="Your name" name="name" required />
+      </div>
+      <div className="email">
+        <input type="email" placeholder="Email" name="email" required />
+      </div>
+      <div>
+        <textarea placeholder="Your message" name="message" required />
+      </div>
+      <div>
+        <button type="submit"> Send a message </button>
+      </div>
+     <p3 className= "P3"> By submitting your message and personal details you are permitting us to contact you by these means in response to your inquiry. </p3>
+    </form>
+  );
+};
 
 export default Contact;
