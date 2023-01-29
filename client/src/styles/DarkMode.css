@@ -36,7 +36,7 @@
 .Loggedindark{
     position: fixed;
     right: 320px;
-   bottom: 799px;
+    bottom: 850px;
     border-radius: 30px 30px 30px; 
 }
 .Toggle{
@@ -47,7 +47,7 @@
 }
 .contactDark{
     position: fixed;
-    right: 320px;
+    right: 289px;
    bottom: 850px;
     border-radius: 30px 30px 30px; 
 }

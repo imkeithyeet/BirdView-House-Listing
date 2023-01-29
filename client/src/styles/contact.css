@@ -6,66 +6,44 @@
     height: 200px;
     font-size: 55px;
     color: rgb(61, 65, 87);
-
-   
-
 }
 
-label{
-    color: rgb(43, 46, 61);
-
-}
 .P3{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     color: rgb(61, 65, 87);
-
-    
-
 }
-.Send{
-    position: relative;
-    text-align: center;
-    right: 2px;
-    top: 12px;
-    filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
 
 
-}
-.Form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    flex-direction: column;
-    padding:1rem
-} 
 input{
     font-size: 1rem;
-    border:2px solid;
-    background-color: rgb(255, 255, 255);
     padding:0.5rem;
-    margin:0.25rem 0;
+    margin:0.9rem 0;
     width:50%;
-    box-sizing: border-box;
     border-radius: 4px;
-
-    
 }
-.P1{
-    position: absolute;
-    justify-content: center;
-    font-size: 20px; 
-     bottom:450px;
-     color: rgb(61, 65, 87);
-
-    
+button{
+    padding:0.2rem;
+    border-radius: 4px;
 }
 
-.Message{
-    height: 700px;
-    font-size: 20px; 
-
+p1{
+    color: rgb(61, 65, 87);
+    font-size: 20px;
+    position: relative;
+    top:-20px;
+}
+.thank {
+    color: rgb(61, 65, 87);
+    font-size: 50px;
+    position: relative;
+    top:100px;
+}
+.soon {
+    color: rgb(61, 65, 87);
+    font-size: 50px;
+    position: relative;
+    top:100px;
 }
