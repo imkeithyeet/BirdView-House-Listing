@@ -67,7 +67,6 @@ function App() {
     <>
       <NavBarLoggedIn user={user} setUser={setUser} />
       <main>
-    {/* <div className={`App ${theme}`}> */}
         <Switch>
           <Route path="/dashboard">
             <Dashboard user={user} setUser={setUser} />
@@ -85,7 +84,6 @@ function App() {
             <HomeLoggedIn user={user} setUser={setUser} />
           </Route>
         </Switch>
-        {/* </div> */}
       </main>
     </>
   );

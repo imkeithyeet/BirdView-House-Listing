@@ -10,7 +10,6 @@ import "../styles/DarkMode.css";
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
   const [amount, setAmount] = useState('');
-  const [formVisible, setFormVisible] = useState(false);
   const [errors, setErrors] = useState([]);
   const [showForm, setShowForm] = useState({});
   const [homewatches, setHomewatches] = useState([]);
@@ -187,7 +186,7 @@ function HomeLoggedIn({ user, setUser }) {
                       className="homeListListings"
                     />
                     <h2>{home.address}</h2>
-                    <h2 className="money">${home.price}</h2>
+                    <ul className="money">${numberWithCommas(home.price)}</ul>
                     <ul>By {home.user.username.toUpperCase()}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
                     <div className="ListingButton">

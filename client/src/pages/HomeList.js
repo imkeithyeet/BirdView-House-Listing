@@ -18,10 +18,6 @@ function HomeList() {
       .then(setHomes);
   }, []);
 
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
   return (
     <div>
       <div className="home-carousel">
