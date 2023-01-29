@@ -1,0 +1,7 @@
+.page-container {
+    display: static;
+    flex-direction: column;
+  }
+  .content-wrap {
+    flex: 1;
+  }
