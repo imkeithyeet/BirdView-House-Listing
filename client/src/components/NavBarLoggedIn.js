@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { Button } from "../styles";
 import "../styles/NavBar.css";
 import "../styles/NavBarLoggedIn.css";
+import Footer from "../components/Footer";
+import "../styles/Footer.css";
+
+
 
 
 function NavBarLoggedIn({ user, setUser }) {
@@ -48,6 +52,7 @@ function NavBarLoggedIn({ user, setUser }) {
             </Button>
           </Nav>
       </Wrapper>
+      <Footer />
     </nav>
   );
 }

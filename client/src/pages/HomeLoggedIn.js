@@ -7,6 +7,7 @@ import "../styles/HomeLoggedIn.css"
 import "../styles/DarkMode.css";
 
 
+
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
   const [amount, setAmount] = useState('');

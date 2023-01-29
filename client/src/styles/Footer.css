@@ -17,19 +17,19 @@
   height: 30px;
   bottom: -40px;
   width: 100%;
-  background-color: rgb(109, 103, 103);
+  background-color: rgb(139, 138, 138);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: -16px;
+  padding-top: 16px;
+
+  }
+
+ /* hr{
+ position: fixed;
+  left: 0;
+  bottom: 49px;
+  width: 100%;
   color: white;
-  text-align: center; 
-
-  }
-
-  .row{
-    margin-top: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 29px;
-    width: 100%;
-    color: white;
-    text-align: center;
-
-  }
+  text-align: center;
+ } */

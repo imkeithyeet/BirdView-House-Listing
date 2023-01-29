@@ -8,15 +8,13 @@ function Footer() {
 
         </div>
         <hr />
-        <div className="row">
             <div className="flex-wrapper">
           <p className="col-sm">
-            &copy;{new Date().getFullYear()} BirdView | All rights reserved |
+            &copy;{new Date().getFullYear()} BirdView, Inc | All rights reserved |
             Terms Of Service | Privacy
           </p>
           </div>
         </div>
-      </div>
   );
 }
 

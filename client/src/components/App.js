@@ -11,7 +11,6 @@ import Dashboard from "../pages/Dashboard";
 import Listing from "../pages/Listing";
 import "../styles/DarkMode.css";
 import Footer from "./Footer";
-import "../styles/App.css";
 
 
 function App() {
