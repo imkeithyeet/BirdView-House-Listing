@@ -10,6 +10,8 @@ import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
 import Listing from "../pages/Listing";
 import "../styles/DarkMode.css";
+import Footer from "./Footer";
+import "../styles/App.css";
 
 
 function App() {
@@ -36,7 +38,9 @@ function App() {
   if (!user)
     return (
       <>
-        <NavBar />
+      <div className="page-container">
+      <div className="content-wrap">
+        <NavBar />     
         <main>
         <button  className="contactDark"onClick={toggleTheme}>🔆/🌙</button>
           <Switch>
@@ -60,6 +64,9 @@ function App() {
             </Route>
           </Switch>
         </main>
+        </div>
+        <Footer />
+      </div>
       </>
     );
 

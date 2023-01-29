@@ -1,0 +1,35 @@
+.main-footer {
+    /* position: fixed;
+    padding: 10px;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  color: white;
+  text-align: center; */
+  
+   
+  }
+
+  .col-sm{
+    position: fixed;
+    padding: 22px;
+  left: 0;
+  height: 30px;
+  bottom: -40px;
+  width: 100%;
+  background-color: rgb(109, 103, 103);
+  color: white;
+  text-align: center; 
+
+  }
+
+  .row{
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 29px;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+  }
