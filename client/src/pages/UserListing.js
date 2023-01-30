@@ -63,6 +63,20 @@ function UserListing({ user, setUser }) {
         });
     }
 
+    const handleDelete = (homeId) => {
+        fetch(`/homes/${homeId}`, {
+            method: "DELETE",
+        })
+            .then((res) => {
+            if (res.ok) {
+                history.push('/dashboard')
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        };
+
     return (
         <>
             {home ? (
@@ -82,9 +96,9 @@ function UserListing({ user, setUser }) {
                             <h1>Offers:</h1>
                                 <h3>${numberWithCommas(offer.amount)}</h3>
                                 <h3>Offered By: {offer.user? capitalizeFirstLetter(offer.user.username) : 'Not found'}</h3>
-                                <div className="UserListingButtons">
+                                <div className="buttons">
                                 <Button variant="outline" onClick={()=>setShowEmail({...showEmail, [index]: !showEmail[index]})}>Respond</Button>
-                                {showEmail[index] ? <div>{offer.user.email}</div> : ""}
+                                {showEmail[index] ? <h3>{offer.user.email}</h3> : ""}
                             </div>
                         </div>
                     )
@@ -124,7 +138,7 @@ function UserListing({ user, setUser }) {
                                         </FormField>
                                         </form>
                                     )}
-                                <Button variant="outline" >Delete This Listing</Button>
+                                <Button variant="outline" onClick={() => handleDelete(home.id)} >Delete This Listing</Button>
                                 </div>
             </>
             ) : (

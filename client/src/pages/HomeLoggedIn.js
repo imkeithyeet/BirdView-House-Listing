@@ -120,7 +120,7 @@ function HomeLoggedIn({ user, setUser }) {
               src="../images/HomeLoggedInPic.jpg"
             />
             <h1 className="centered">
-              Welcome, {capitalizeFirstLetter(user.username)}
+              Welcome, {user.username && capitalizeFirstLetter(user.username)}
             </h1>
           </div>
           <h2 className="O">Offers you have made: </h2>
@@ -252,7 +252,7 @@ function HomeLoggedIn({ user, setUser }) {
             ) : (
               <>
                 <h2>No Homes Found</h2>
-                <Button as={Link} to="/new">
+                <Button variant="outline" as={Link} to="/new">
                   List your Home!
                 </Button>
               </>
