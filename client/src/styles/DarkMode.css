@@ -9,30 +9,30 @@
 .Button{
     position: fixed;
     right: 400px;
-   bottom: -100px;
+    bottom: -100px;
     border-radius: 30px 30px 30px; 
 
-    
 }
 .toggle{
     position: fixed;
-     right: 400px;
+    right: 400px;
     bottom: -100px;
-     border-radius: 30px 30px 30px; 
+    border-radius: 30px 30px 30px;
 }
 
 .LogLight{
     position: fixed;
     right: 400px;
-   bottom: -100px;
-    border-radius: 30px 30px 30px; 
+    bottom: -100px;
+    border-radius: 30px 30px 30px;
 }
 .LoggedInDark{
     position: fixed;
     right: 280px;
-   bottom: 809px;
-    border-radius: 30px 30px 30px; 
+    bottom: 809px;
+    border-radius: 30px 30px 30px;
 }
+
 .Loggedindark{
     position: fixed;
     right: 320px;
@@ -42,18 +42,32 @@
 .Toggle{
     position: fixed;
     right: 320px;
-   bottom: 850px;
+    bottom: 850px;
     border-radius: 30px 30px 30px; 
 }
 .contactDark{
     position: fixed;
-    right: 289px;
-   bottom: 850px;
-    border-radius: 30px 30px 30px; 
+    right: 90px;
+    bottom: 530px;
+    border-radius: 30px 30px 30px;
+    z-index: 999;
 }
+
+.contactDark2{
+    position: fixed;
+    right: 90px;
+    bottom: 480px;
+    border-radius: 30px 30px 30px;
+    z-index: 999;
+}
+
 .buttonDark{
     position: fixed;
     right: 290px;
-   bottom: 850px;
-    border-radius: 30px 30px 30px; 
+    bottom: 850px;
+    border-radius: 30px 30px 30px;
+}
+
+.LoginPage {
+    padding-top: 140px;
 }

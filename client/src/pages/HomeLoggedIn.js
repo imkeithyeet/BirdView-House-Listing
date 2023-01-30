@@ -128,20 +128,20 @@ function HomeLoggedIn({ user, setUser }) {
                   <h3>{offer.home_address}</h3>
                   <h4>Asking: ${numberWithCommas(offer.home.price)}</h4>
                   <h4>Your offer: ${numberWithCommas(offer.amount)}</h4>
-                  <button onClick={()=>setShowForm({...showForm, [index]: !showForm[index]})}>
+                  <Button variant="outline" onClick={()=>setShowForm({...showForm, [index]: !showForm[index]})}>
                 {showForm[index] ? 'Cancel' : 'Edit Offer'}
-            </button>
+            </Button>
             {showForm[index] && (
               <form>
                 <input type="text" value={amount} onChange={handleChange} />
-                <button onClick={() => handleEdit(offer.id)}>Edit Offer</button>
+                <Button variant="outline" onClick={() => handleEdit(offer.id)}>Edit Offer</Button>
                 <FormField>
                     {errors.map((err) => (
                         <Error key={err}>{err}</Error>
                     ))}
                 </FormField>
               </form>)}
-                  <button onClick={() => handleDelete(offer.id)}>Delete offer</button>
+                  <Button variant="outline" onClick={() => handleDelete(offer.id)}>Delete offer</Button>
                 </div>
               )
             }) : <p>You have no offers</p>}
@@ -162,14 +162,13 @@ function HomeLoggedIn({ user, setUser }) {
                         className="homeListListings"
                       />
                       <h2>{homewatch.home.address}</h2>
-                      <ul>By {capitalizeFirstLetter(homewatch.user.username)}</ul>
                       <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
                       <div className="ListingButton">
-                      <Button  as={Link} to={`/homes?id=${homewatch.home.id}`}>
+                      <div className="remove">
+                      <Button variant="outline" as={Link} to={`/homes?id=${homewatch.home.id}`}>
                       View Full Listing
                     </Button>
-                    <div className="remove">
-                    <Button onClick={() => handleDeleteHomewatch(homewatch.id)}>
+                    <Button variant="outline" onClick={() => handleDeleteHomewatch(homewatch.id)}>
                       Remove From My Favorites
                     </Button>
                     </div>
@@ -195,7 +194,7 @@ function HomeLoggedIn({ user, setUser }) {
                     <ul className="money">${numberWithCommas(home.price)}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
                     <div className="ListingButton">
-                    <Button  as={Link} to={`/homes?id=${home.id}`}>
+                    <Button variant="outline" as={Link} to={`/homes?id=${home.id}`}>
                     View Full Listing
                   </Button>
                   </div>

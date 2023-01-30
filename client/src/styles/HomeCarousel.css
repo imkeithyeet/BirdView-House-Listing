@@ -1,5 +1,22 @@
 .home-carousel{
- position: absolute;
-top: -200px;
-width:auto
+    position: absolute;
+    top: -200px;
+    width:auto;
+
+}
+
+.words {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-caption {
+    color: rgb(61, 65, 87);
+    text-shadow: 2px 2px black;
+}
+
+.carousel-image {
+    opacity: 55%;
 }

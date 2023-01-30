@@ -13,7 +13,10 @@ function HomeCarousel({ homes }) {
           src={photo.image_url}
           alt={photo.description}
         />
-        <p className="carousel-caption">{photo.description}</p>
+        <div className="words">
+        <h1 className="carousel-caption">{photo.description}</h1>
+          <h2 className="carousel-caption" >{home.address}</h2>
+        </div>
       </div>
     ))
   );

@@ -11,6 +11,7 @@ function Login({ onLogin }) {
 
   return (
     <Wrapper>
+      <div className="LoginPage">
       <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
       </Logo>
       {showLogin ? (
@@ -19,7 +20,7 @@ function Login({ onLogin }) {
           <Divider />
           <p>
             Don't have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(false)}>
+            <Button variant="outline" onClick={() => setShowLogin(false)}>
               Sign Up
             </Button>
           </p>
@@ -30,12 +31,13 @@ function Login({ onLogin }) {
           <Divider />
           <p>
             Already have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(true)}>
+            <Button variant="outline" onClick={() => setShowLogin(true)}>
               Log In
             </Button>
           </p>
         </>
       )}
+      </div>
     </Wrapper>
   );
 }

@@ -1,11 +1,11 @@
 .homelist {
   position: relative;
-  top: 980px;
+  top: 1100px;
   display: flex;
   overflow-x: auto;
   left: 0;
   margin: 5rem 0;
-  max-width: calc(980vw - 2rem);
+  max-width: calc(1500vw - 2rem);
 }
 .homelist-loggedin {
   position: relative;

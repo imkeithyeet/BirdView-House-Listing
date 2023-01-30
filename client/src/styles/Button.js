@@ -7,7 +7,7 @@ const COLORS = {
     "--accent": "rgba(40,40,55,1)",
   },
   secondary: {
-    "--main": "black",
+    "--main": "white",
     "--accent": "white",
 
     "--main": "black",
@@ -32,12 +32,14 @@ function Button({ variant = "fill", color = "primary", ...props }) {
 
 const ButtonBase = styled.button`
   cursor: pointer;
+  box-shadow: 2px 2px 2px;
   font-size: 1rem;
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 8px 10px;
   text-decoration:none;
   text-align:center;
+  font-family: "Noto-Sans", sans-serif;
 `
 ;
 
@@ -51,9 +53,9 @@ const FillButton = styled(ButtonBase)`
 `;
 
 const OutlineButton = styled(ButtonBase)`
-  background-color: white;
-  color: var(--main);
-  border: 2px solid var(--main);
+  background-color: #d9d9d9;
+  color: rgba(40,40,55,1);
+  border: 2px solid rgba(40,40,55,1);
 
   &:hover {
     background: hsl(235deg 85% 97%);

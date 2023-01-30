@@ -44,7 +44,7 @@ function HomeList() {
                 <ReactMarkdown>{home.bio}</ReactMarkdown>
                 <ul className="Price">${numberWithCommas(home.price)}</ul>
                 <div className= "ListingButton">
-                  <Button as={Link} to={`/homes?id=${home.id}`} >
+                  <Button variant="outline" as={Link} to={`/homes?id=${home.id}`} >
                     View Full Listing
                   </Button>
                 </div>
@@ -54,7 +54,7 @@ function HomeList() {
         ) : (
           <>
             <h2>No Homes Found</h2>
-            <Button as={Link} to="/new">
+            <Button variant="outline" as={Link} to="/new">
               List your Home!
             </Button>
           </>

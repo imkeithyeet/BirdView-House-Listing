@@ -88,7 +88,7 @@ function NewHome({ user, setUser }) {
             />
           </FormField>
           <FormField>
-            <Button color="primary" type="submit">
+            <Button variant="outline" type="submit">
               {isLoading ? "Loading..." : "Submit Listing"}
             </Button>
           </FormField>

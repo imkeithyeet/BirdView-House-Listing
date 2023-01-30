@@ -11,6 +11,7 @@ const Textarea = styled.textarea`
   line-height: 1.5;
   padding: 4px;
   resize: none;
+  font-family: "Noto-Sans", sans-serif;
 `;
 
 export default Textarea;

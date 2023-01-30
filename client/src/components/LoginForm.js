@@ -49,7 +49,7 @@ function LoginForm({ onLogin }) {
         />
       </FormField>
       <FormField>
-        <Button variant="fill" color="primary" type="submit">
+        <Button variant="outline" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </Button>
       </FormField>

@@ -39,7 +39,6 @@ function Dashboard({ user, setUser }) {
     return (
         <>
         <h1 className="H1" >Homes for Sale: </h1>
-        <button  className="Toggle"onClick={toggleTheme}>🔆/🌙</button>
             <div>
             {user && user.homes && user.homes.map((home) => (
             <div className="homesForSale" >

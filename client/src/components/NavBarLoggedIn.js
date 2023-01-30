@@ -36,18 +36,18 @@ function NavBarLoggedIn({ user, setUser }) {
       <Wrapper className="Links">
           <Nav className="nav">
             <div className="nav2">
-          <Button>
+          <Button variant="outline">
             <Link to="/" className="logo">
-            <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/>
+            <img src="../images/logos.png" alt="logo" width={116} height={116} className="rounded-corners"/>
             </Link>
-          </Button>
-            <Button as={Link} to="/dashboard">
+          </Button >
+            <Button variant="outline" as={Link} to="/dashboard">
               Dashboard
             </Button>
-            <Button as={Link} to="/about">
+            <Button variant="outline" as={Link} to="/about">
               About
             </Button>
-            <Button as={Link} to="/contact">
+            <Button variant="outline" as={Link} to="/contact">
               Contact
             </Button>
             <Button variant="outline" onClick={handleLogoutClick}>

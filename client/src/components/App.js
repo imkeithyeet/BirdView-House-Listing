@@ -12,18 +12,22 @@ import Listing from "../pages/Listing";
 import UserListing from "../pages/UserListing";
 import "../styles/DarkMode.css";
 import Footer from "./Footer";
+import { Button } from "../styles";
 
 
 function App() {
   const [user, setUser] = useState(null);
+  const [showSun, setShowSun] = useState(true);
   const [theme, setTheme] = useState('light');
   const toggleTheme = () => {
+    setShowSun()
   if (theme === 'light') {
     setTheme('dark');
     } else {
     setTheme('light');
     }
     };
+    
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
@@ -40,21 +44,18 @@ function App() {
       <>
       <div className="page-container">
       <div className="content-wrap">
-        <NavBar />     
+        <NavBar />
         <main>
-        <button  className="contactDark"onClick={toggleTheme}>🔆/🌙</button>
+        <Button variant="outline" className="contactDark" onClick={toggleTheme}>{theme == 'light' ? '🔆' : '🌙'}</Button>
           <Switch>
             <Route path="/about">
               <About />
-              <button  className="toggle"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/login">
               <Login onLogin={setUser} />
-              <button  className="LogLight"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/contact">
               <Contact />
-              <button  className="Button"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/homes">
               <Listing />
@@ -74,6 +75,7 @@ function App() {
     <>
       <NavBarLoggedIn user={user} setUser={setUser} />
       <main>
+      <Button variant="outline" className="contactDark2" onClick={toggleTheme}>{theme == 'light' ? '🔆' : '🌙'}</Button>
         <Switch>
           <Route path="/dashboard">
             <Dashboard user={user} setUser={setUser} />
