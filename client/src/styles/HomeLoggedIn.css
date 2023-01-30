@@ -31,16 +31,42 @@
 P{
     position: relative;
     padding-bottom: 20px;
+    color: rgb(61, 65, 87);
+
 }
 .W{
     position: relative;
     text-align: center;
     padding-bottom: 20px;
     top: 45px;
+    color: rgb(61, 65, 87);
+
+    
 }
 .O{
     position: relative;
     text-align: center;
     padding-bottom: 20px;
     top: 30px;
+    color: rgb(61, 65, 87);
+}
+h2{
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(61, 65, 87);
+}
+.money{
+    font-size: 40px;
+    color: rgb(61, 65, 87);
+
+}
+.remove{
+    box-shadow: 2px 2px 2px;
+    left: 20px;
+}
+.ListingButton{
+   position: relative;
+    box-shadow: 2px ;
+
 }

@@ -4,16 +4,27 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button, FormField, Error } from "../styles";
 import "../styles/HomeLoggedIn.css"
-// import HomeLoggedInPic from "../images/HomeLoggedInPic.jpg"
+import "../styles/DarkMode.css";
+
 
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
   const [amount, setAmount] = useState('');
-  const [formVisible, setFormVisible] = useState(false);
   const [errors, setErrors] = useState([]);
   const [showForm, setShowForm] = useState({});
   const [homewatches, setHomewatches] = useState([]);
-
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+  if (theme === 'light') {
+    setTheme('dark');
+    } else {
+    setTheme('light');
+    }
+    };
+    useEffect(() => {
+      document.body.className = theme;
+        }, [theme]);
+    
   useEffect(() => {
     if (user) {
         fetch("/users/" + user.id)
@@ -102,6 +113,7 @@ function HomeLoggedIn({ user, setUser }) {
   }
 
   return (
+    
     <Wrapper>
       {user && (
         <div>
@@ -136,7 +148,7 @@ function HomeLoggedIn({ user, setUser }) {
           <h2>
             {`You have `}
             <Link to="/dashboard">{user.offer_count}</Link>
-            {user.offer_count == 1 ? ' offer on your Listings' : ' offers on your Listings'}
+            {user.offer_count === 1 ? ' offer on your Listings' : ' offers on your Listings'}
           </h2>
           <h2>Your Personal Favorites:</h2>
           <Wrapper className="homelist-loggedin">
@@ -152,13 +164,15 @@ function HomeLoggedIn({ user, setUser }) {
                       <h2>{homewatch.home.address}</h2>
                       <ul>By {capitalizeFirstLetter(homewatch.user.username)}</ul>
                       <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
-                      <div className= "ListingButton">
-                    <Button as={Link} to={`/homes?id=${homewatch.home.id}`}>
+                      <div className="ListingButton">
+                      <Button  as={Link} to={`/homes?id=${homewatch.home.id}`}>
                       View Full Listing
                     </Button>
+                    <div className="remove">
                     <Button onClick={() => handleDeleteHomewatch(homewatch.id)}>
                       Remove From My Favorites
                     </Button>
+                    </div>
                     </div>
                     </Box>
                   </Home>
@@ -178,9 +192,10 @@ function HomeLoggedIn({ user, setUser }) {
                     />
                     <h2>{home.address}</h2>
                     <ul>By {capitalizeFirstLetter(home.user.username)}</ul>
+                    <ul className="money">${numberWithCommas(home.price)}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
-                    <div className= "ListingButton">
-                  <Button as={Link} to={`/homes?id=${home.id}`}>
+                    <div className="ListingButton">
+                    <Button  as={Link} to={`/homes?id=${home.id}`}>
                     View Full Listing
                   </Button>
                   </div>

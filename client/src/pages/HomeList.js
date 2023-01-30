@@ -15,6 +15,7 @@ function HomeList() {
       .then(setHomes);
   }, []);
 
+
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -31,7 +32,7 @@ function HomeList() {
       <Wrapper className="homelist">
         {homes.length > 0 ? (
           homes.map((home) => (
-            <Recipe key={home.id}>
+            <Home key={home.id}>
               <h1>{home.address}</h1>
               <Box>
                 <img
@@ -48,7 +49,7 @@ function HomeList() {
                   </Button>
                 </div>
               </Box>
-            </Recipe>
+            </Home>
           ))
         ) : (
           <>
@@ -68,7 +69,7 @@ const Wrapper = styled.section`
   margin: 40px auto;
 `;
 
-const Recipe = styled.article`
+const Home = styled.article`
   margin-bottom: 24px;
 `;
 

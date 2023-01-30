@@ -14,13 +14,13 @@ Homewatch.destroy_all
 
 puts "Seeding users..."
 u1 = User.create(username:"caitlinhouse", email: 'Caitlin@gmail.com', password: "1234")
-u2 = User.create(username:"dreamfront", email: 'Lizzie@yahoo.com', password:"ilovechicken")
+u2 = User.create(username:"dreamfront", email: 'lizzie@yahoo.com', password:"ilovechicken")
 u3 = User.create(username:"hopes", email: 'Tom@hotmail.com', password:"dragonslayer")
 u4 = User.create(username: "immorganyeet", email: 'Morgan@gmail.com',password:"master")
 u5 = User.create(username:"dannydevito", email: 'Danny@gmail.com', password:"420")
 u6 = User.create(username: "familyhome", email: 'Peter@gmail.com', password:"sub")
-u7 = User.create(username: "bynes", email: 'Amanda@gmail.com', password:"hello")
-u8 = User.create(username:"jonasbrother", email: 'Nick@gmail.com', password:"morgan")
+u7 = User.create(username: "bynes", email: 'amanda@gmail.com', password:"hello")
+u8 = User.create(username:"jonasbrother", email: 'nick@gmail.com', password:"morgan")
 
 
 puts "Seeding homes..."
@@ -35,9 +35,9 @@ h8 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:60
 
 
 puts "Seeding photos..."
-p1 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/87842c264b9338c9e4df482b623f6ff2-uncropped_scaled_within_1536_1152.webp', description: "Modern Escape", home:h1)
-p2 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/58dcf8d95e06f3673917e59ad768b1a2-uncropped_scaled_within_1536_1152.webp', description: "Hope is Lost", home:h2)
-p3 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/42eaeb84268af1ea12270bbb9bcb0b02-uncropped_scaled_within_1536_1152.webp', description: "Modern Living", home:h3)
+p1 = Photo.create(image_url: 'https://wp-tid.zillowstatic.com/bedrock/app/uploads/sites/31/shutterstock_112472870-682b30-0b84e5.jpg', description: "Modern Escape", home:h1)
+p2 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/90a44ca13f7923057b405bf9368595e3-cc_ft_1536.webp', description: "Hope is Lost", home:h2)
+p3 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/90a44ca13f7923057b405bf9368595e3-cc_ft_1536.webp', description: "Modern Living", home:h3)
 p4 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)
 p5 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/30fade5563ba4103958f4878a3308df0-uncropped_scaled_within_1536_1152.webp', description:  "Southern Escape", home:h5)
 p6 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e81e795e66ad59454d798340a538c3ab-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)

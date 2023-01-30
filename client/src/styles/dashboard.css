@@ -14,3 +14,18 @@
 .homesForSale {
     text-align: center;
 }
+div{
+    position:relative;
+    text-align: center;
+}
+dashListings{
+    color: rgb(61, 65, 87);
+
+}
+li{
+    color: rgb(61, 65, 87);
+    
+}
+.offers{
+    color: rgb(61, 65, 87);
+}

@@ -10,10 +10,20 @@ import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
 import Listing from "../pages/Listing";
 import UserListing from "../pages/UserListing";
+import "../styles/DarkMode.css";
+import Footer from "./Footer";
+
 
 function App() {
   const [user, setUser] = useState(null);
-
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+  if (theme === 'light') {
+    setTheme('dark');
+    } else {
+    setTheme('light');
+    }
+    };
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
@@ -21,21 +31,30 @@ function App() {
       }
     });
   }, []);
+  useEffect(() => {
+  document.body.className = theme;
+    }, [theme]);
 
   if (!user)
     return (
       <>
-        <NavBar />
+      <div className="page-container">
+      <div className="content-wrap">
+        <NavBar />     
         <main>
+        <button  className="contactDark"onClick={toggleTheme}>🔆/🌙</button>
           <Switch>
             <Route path="/about">
               <About />
+              <button  className="toggle"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/login">
               <Login onLogin={setUser} />
+              <button  className="LogLight"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/contact">
               <Contact />
+              <button  className="Button"onClick={toggleTheme}>🔆/🌙</button>
             </Route>
             <Route path="/homes">
               <Listing />
@@ -45,6 +64,9 @@ function App() {
             </Route>
           </Switch>
         </main>
+        </div>
+        <Footer />
+      </div>
       </>
     );
 

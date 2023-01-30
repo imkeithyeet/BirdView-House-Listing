@@ -25,12 +25,7 @@
   display: block;
   padding-bottom: 100px;
 }
-ul {
-  font-size: 30px;
-  width: relative;
-  position: relative;
-  text-align: center;
-}
+
 p {
   font-size: 25px;
   width: relative;
@@ -69,12 +64,16 @@ ul {
   width: relative;
   position: relative;
   text-align: center;
+  color: rgb(61, 65, 87);
+
 }
 p {
   font-size: 23px;
   width: relative;
   position: relative;
   text-align: center;
+  color: rgb(61, 65, 87);
+
 }
 .ListingButton {
   display: flex;
@@ -88,4 +87,18 @@ p4 {
   font-size: 45px;
   position: relative;
   left: 280px;
+  color: rgb(61, 65, 87);
+
+}
+h1{
+  color: rgb(61, 65, 87);
+
+}
+h3{
+  color: rgb(61, 65, 87);
+
+}
+h4{
+  color: rgb(61, 65, 87);
+
 }
