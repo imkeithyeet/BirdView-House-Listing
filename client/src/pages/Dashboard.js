@@ -27,41 +27,41 @@ function Dashboard({ user, setUser }) {
     }
   }, []);
 
-  return (
-    <>
-      <h1 className="H1">Homes for Sale: </h1>
-      <div>
-        {user &&
-          user.homes &&
-          user.homes.map((home) => (
-            <div className="homesForSale">
-              <Link to={`/listing?id=${home.id}`}>
-                <h3>{home.address}</h3>
-              </Link>
-              <h2>
-                {`You have `}
-                <Link to={`/listing?id=${home.id}`}>{home.offers.length}</Link>
-                {home.offers.length === 1
-                  ? " offer on this home"
-                  : " offers on this home"}
-              </h2>
-              <img
-                className="dashListings"
-                src={
-                  (home.photos?.length > 0 && home.photos[0].image_url) ||
-                  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
-                }
-                alt={home.bio}
-              />
-            </div>
-          ))}
-      </div>
-      <h2 className="H2" style={{ color: "DarkSlateGray" }}>
-        Sell your Home:{" "}
-      </h2>
-      <NewHome user={user} setUser={setUser} />
-    </>
-  );
+    return (
+        <>
+        <h1 className="H1">Homes for Sale: </h1>
+        <div>
+            {user &&
+            user.homes &&
+            user.homes.map((home) => (
+                <div className="homesForSale">
+                <Link to={`/listing?id=${home.id}`}>
+                    <h3>{home.address}</h3>
+                </Link>
+                <h2>
+                    {`You have `}
+                    <Link to={`/listing?id=${home.id}`}>{home.offers.length}</Link>
+                    {home.offers.length === 1
+                    ? " offer on this home"
+                    : " offers on this home"}
+                </h2>
+                <img
+                    className="dashListings"
+                    src={
+                    (home.photos?.length > 0 && home.photos[0].image_url) ||
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                    }
+                    alt={home.bio}
+                />
+                </div>
+            ))}
+        </div>
+        <h2 className="H2" style={{ color: "DarkSlateGray" }}>
+            Sell your Home:{" "}
+        </h2>
+        <NewHome user={user} setUser={setUser} />
+        </>
+    );
 }
 
 export default Dashboard;

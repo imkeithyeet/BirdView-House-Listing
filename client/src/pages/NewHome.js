@@ -104,7 +104,7 @@ function NewHome({ user, setUser }) {
         <p>
           <em>Asking: ${numberWithCommas(price)}</em>
           &nbsp;·&nbsp;
-          <cite>Listed by: {capitalizeFirstLetter(user.username)}</cite>
+          <cite>Listed by: {user.username && capitalizeFirstLetter(user.username)}</cite>
         </p>
         <ReactMarkdown>{bio}</ReactMarkdown>
       </WrapperChild>

@@ -131,6 +131,7 @@ function HomeLoggedIn({ user, setUser }) {
                   <h3>{offer.home_address}</h3>
                   <h4>Asking: ${numberWithCommas(offer.home.price)}</h4>
                   <h4>Your offer: ${numberWithCommas(offer.amount)}</h4>
+                  <div className="buttons">
                   <Button
                     variant="outline"
                     onClick={() =>
@@ -165,6 +166,7 @@ function HomeLoggedIn({ user, setUser }) {
                   >
                     Delete offer
                   </Button>
+                  </div>
                 </div>
               );
             })

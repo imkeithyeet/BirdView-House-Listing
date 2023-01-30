@@ -17,7 +17,7 @@ class HomesController < ApplicationController
         render json: home, status: :created
     end
 
-    def update
+    def destroy
         home = find_home
         home.destroy
         head :no_content

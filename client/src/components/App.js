@@ -90,7 +90,7 @@ function App() {
             <Listing user={user} onOffer={setUser} />
           </Route>
           <Route path="/listing">
-            <UserListing user={user} onOffer={setUser} />
+            <UserListing user={user} setUser={setUser} />
           </Route>
           <Route path="/">
             <HomeLoggedIn user={user} setUser={setUser} />
