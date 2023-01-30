@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Listing.css"
-import { Error, FormField, Label, Textarea } from "../styles";
+import { Error, FormField, Button, Label, Input } from "../styles";
 import { useHistory } from "react-router-dom";
 import ListingCarousel from "../components/ListingCarousel.js"
 
@@ -12,11 +12,15 @@ function Listing({ user, onOffer }) {
     const [errors, setErrors] = useState([]);
     const history = useHistory();
 
-  useEffect(() => {
-    fetch(`/homes/${id}`)
-      .then((r) => r.json())
-      .then(setHome);
-  }, []);
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    useEffect(() => {
+        fetch(`/homes/${id}`)
+        .then((r) => r.json())
+        .then(setHome);
+    }, []);
 
     function handleCreateOffer(event) {
         event.preventDefault();
@@ -37,63 +41,93 @@ function Listing({ user, onOffer }) {
             }
         });
     }
-    
+
 function handleCreateHomewatch() {
     fetch(`/homewatches`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ home_id: home.id, user_id: user.id }),
-    })
-      .then((r) => r.json())
-      .then(console.log);
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({ home_id: home.id, user_id: user.id }),
+        })
+        .then((r) => r.json())
+        .then(console.log);
+    }
+
+      function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-  
+
     if (!user) return (
-        <>
+        <div className="listingContainer" >
+            <h1>{home && home.address}</h1>
             <img className="ListingPic" src={home && home.photos && home.photos[0].image_url} />
-                <div>{home && home.address}</div>
-            <h1>Being sold by: {home.user && home.user.username}</h1>
+            <p>{home && home.bio}</p>
+                <h2>Asking Price: ${home && home.price && numberWithCommas(home.price)}</h2>
+            <h1>Being sold by: {home.user && capitalizeFirstLetter(home.user.username)}</h1>
+            <h3>Gallery:</h3>
             <ListingCarousel home={home} />
-        </>
+        </div>
     )
 
-  return (
-    <>
-      <img
-        className="ListingPic"
-        src={
-          home.photos && home.photos.map((photo) => photo && photo.image_url)
-        }
-      />
-      <div>{home && home.address}</div>
-      <h1>Being sold by: {home.user && home.user.username.toUpperCase()}</h1>
-      <ListingCarousel home={home} />
-      <button onClick={() => setFormVisible(!formVisible)}>
-        {formVisible ? "Cancel" : "Place an Offer"}
-      </button>
-      <button
-        onClick={() => {
-          handleCreateHomewatch();
-        }}
-      >
-        ❤️
-      </button>
-      {formVisible && (
-            <form onSubmit={event => handleCreateOffer(event)}>
-                <input type="text" value={amount} placeholder="amount..." onChange={e => setAmount(e.target.value)} />
-                <button type="submit" onClick={onOffer} >Submit</button>
-                <FormField>
-                    {errors.map((err) => (
-                        <Error key={err}>{err}</Error>
-                    ))}
-                </FormField>
-            </form>
-        )}
-    </>
-  );
+    return (
+        <div className="listingContainer">
+            <h1 className="titlePlusButton">
+                <button
+                        onClick={() => {
+                        handleCreateHomewatch();
+                    }}
+                    className ="watchButton" >
+                        ❤️
+                </button>
+                {home && home.address}
+            </h1>
+            {/* <button
+                    onClick={() => {
+                    handleCreateHomewatch();
+                }}
+                className ="watchButton" >
+                    ❤️
+            </button> */}
+            <div className="listingCont2">
+            <img className="ListingPic" src={home && home.photos && home.photos[0].image_url} />
+            </div>
+            <p>{home && home.bio}</p>
+                <h2>Asking Price: ${home && home.price && numberWithCommas(home.price)}</h2>
+            <h1>Being sold by: {home.user && capitalizeFirstLetter(home.user.username)}</h1>
+            <ul></ul>
+            <div buttons>
+            {/* <Button
+                    onClick={() => {
+                    handleCreateHomewatch();
+                }}
+                className ="watchButton" >
+                Add To Watchlist
+            </Button> */}
+                <Button onClick={() => setFormVisible(!formVisible)}>
+                    {formVisible ? "Cancel" : "Place an Offer"}
+                </Button>
+                </div>
+                <ul></ul>
+        {formVisible && (
+            <>
+                <form onSubmit={event => handleCreateOffer(event)}>
+                    <input type="text" value={amount} placeholder="amount..." onChange={e => setAmount(e.target.value)} />
+                    <Button type="submit" onClick={onOffer} >Submit</Button>
+                    <FormField>
+                        {errors.map((err) => (
+                            <Error key={err}>{err}</Error>
+                        ))}
+                    </FormField>
+                </form>
+                <ul></ul>
+            </>
+            )}
+             <h3>Gallery:</h3>
+                <ListingCarousel home={home} />
+        </div>
+    );
 }
 
 export default Listing;

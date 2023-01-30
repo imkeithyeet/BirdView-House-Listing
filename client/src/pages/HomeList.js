@@ -8,9 +8,6 @@ import HomeCarousel from "../components/HomeCarousel";
 
 function HomeList() {
   const [homes, setHomes] = useState([]);
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
 
   useEffect(() => {
     fetch("/homes")
@@ -21,6 +18,10 @@ function HomeList() {
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
   return (
     <div>
@@ -34,11 +35,11 @@ function HomeList() {
               <h1>{home.address}</h1>
               <Box>
                 <img
-                  src={home.photos && home.photos[0].image_url}
+                  src={home.photos.length > 0 && home.photos[0].image_url}
                   alt={home.bio}
                   className="homeListListings"
                 />
-                <ul>By {home.user.username}</ul>
+                <ul>By {capitalizeFirstLetter(home.user.username)}</ul>
                 <ReactMarkdown>{home.bio}</ReactMarkdown>
                 <ul className="Price">${numberWithCommas(home.price)}</ul>
                 <div className= "ListingButton">

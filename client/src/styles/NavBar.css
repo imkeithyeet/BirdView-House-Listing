@@ -1,26 +1,20 @@
 .navbar {
   background: transparent;
-  height: 80px;
   display: flex;
-  justify-content: left;
-  align-items: center;
   position: sticky;
-  top: 2px;
   z-index: 999;
-  top: 21px;
+  top: 18px;
 }
 
 .navbar-active {
   background:transparent;
-  height: 79px;
   display: flex;
-  justify-content: left;
-  align-items: center;
   position: sticky;
-  top: 0px;
   z-index: 1000;
   bottom: 650px;
+  top: 18px
 }
+
 .container{
   position: relative;
   width: 100%;
@@ -29,20 +23,20 @@
   top:0.1em;
 
 }
-.rounded-corners{
+/* .rounded-corners{
   position: relative;
   border-radius: 6px 6px 6px;
   top:20px;
 
+} */
+.nav{
+  padding-right: 20px;
+  top: 20px;
 
 }
-.nav{
-  position: relative;
-  padding-right: 29px;
-  top:15px;
-}
-.logo{
-  position: absolute;
-  top:0.01em;
-  left: 22px;
+
+
+.nav2 {
+  display: grid;
+  gap: 18px;
 }

@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import HomeLoggedIn from "../pages/HomeLoggedIn";
 import Dashboard from "../pages/Dashboard";
 import Listing from "../pages/Listing";
+import UserListing from "../pages/UserListing";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -63,6 +64,9 @@ function App() {
           </Route>
           <Route path="/homes">
             <Listing user={user} onOffer={setUser} />
+          </Route>
+          <Route path="/user">
+            <UserListing user={user} onOffer={setUser} />
           </Route>
           <Route path="/">
             <HomeLoggedIn user={user} setUser={setUser} />

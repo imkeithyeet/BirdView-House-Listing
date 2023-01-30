@@ -3,19 +3,19 @@ import styled from "styled-components";
 const COLORS = {
   primary: {
 
-    "--main": "LightSlateGray",
-    "--accent": "black",
+    "--main": "rgba(155,140,152,1)",
+    "--accent": "rgba(40,40,55,1)",
   },
   secondary: {
-    "--main": "grey",
-    "--accent": "purple",
+    "--main": "black",
+    "--accent": "white",
 
-    "--main": "SlateGray",
+    "--main": "black",
     "--accent": "white",
   },
   secondary: {
-    "--main": "LightGray",
-    "--accent": "black",
+    "--main": "rgba(177,164,174,1)",
+    "--accent": "rgba(40,40,55,1)",
   },
 };
 
@@ -35,10 +35,11 @@ const ButtonBase = styled.button`
   font-size: 1rem;
   border: 1px solid transparent;
   border-radius: 6px;
-  padding: 8px 16px;
-  text-decoration:shadow;
-
-`;
+  padding: 8px 10px;
+  text-decoration:none;
+  text-align:center;
+`
+;
 
 const FillButton = styled(ButtonBase)`
   background-color: var(--main);

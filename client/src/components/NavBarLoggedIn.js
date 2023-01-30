@@ -15,7 +15,7 @@ function NavBarLoggedIn({ user, setUser }) {
         setUser(null);
       }
     });
-  }
+  } 
 
   const changeBackground = () => {
     if (window.scrollY >= 25) {
@@ -30,10 +30,13 @@ function NavBarLoggedIn({ user, setUser }) {
   return (
     <nav className={navBar ? "navbar-active" : "navbar"}>
       <Wrapper className="Links">
-        <Logo>
-        <Link to="/"> <img src="../images/logo.png" alt="logo" width={116} height={116} className="Rounded-corners"/></Link>
-        </Logo>
-          <Nav>
+          <Nav className="nav">
+            <div className="nav2">
+          <Button>
+            <Link to="/" className="logo">
+            <img src="../images/logo.png" alt="logo" width={116} height={116} className="rounded-corners"/>
+            </Link>
+          </Button>
             <Button as={Link} to="/dashboard">
               Dashboard
             </Button>
@@ -46,6 +49,7 @@ function NavBarLoggedIn({ user, setUser }) {
             <Button variant="outline" onClick={handleLogoutClick}>
               Logout
             </Button>
+            </div>
           </Nav>
       </Wrapper>
     </nav>

@@ -43,14 +43,14 @@ p5 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/30fade5563ba410
 p6 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e81e795e66ad59454d798340a538c3ab-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)
 p7 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/0db72555ed567b919659248788e6f7c2-uncropped_scaled_within_1536_1152.webp', description:  "Closed Off Terrace", home:h7)
 p8 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/c88a83e28265f043bd586b875fb23397-uncropped_scaled_within_1536_1152.webp', description: "Wooden Bliss", home:h8)
-p9 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/f08c278bb9bddfcbe496b61926789ac6-cc_ft_768.webp', home:h1)
-p10 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/090256f7e1425851390f5872ab8a789e-uncropped_scaled_within_1536_1152.webp', description: "Hope is Lost", home:h2)
-p11 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/532311d40333f0e2f8baa71989774140-uncropped_scaled_within_1536_1152.webp', description: "Modern Living", home:h3)
-p12 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)
-p13 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/49ee3717d762ddc22fede71ffeef54da-uncropped_scaled_within_1536_1152.webp', description:  "Southern Escape", home:h5)
-p14 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/8576940c1a13546b01a016aa7fbbf98f-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)
-p15 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/60df0bb2105a0f895c4b254b04fefd9e-uncropped_scaled_within_1536_1152.webp', description:  "Closed Off Terrace", home:h7)
-p16 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e41ae85d9f1a4f6620c45a8f4adf5a3f-uncropped_scaled_within_1536_1152.webp', description: "Wooden Bliss", home:h8)
+# p9 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/f08c278bb9bddfcbe496b61926789ac6-cc_ft_768.webp', home:h1)
+# p10 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/090256f7e1425851390f5872ab8a789e-uncropped_scaled_within_1536_1152.webp', description: "Hope is Lost", home:h2)
+# p11 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/532311d40333f0e2f8baa71989774140-uncropped_scaled_within_1536_1152.webp', description: "Modern Living", home:h3)
+# p12 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/126f1b1c6eb30652701e77dd88f42e44-uncropped_scaled_within_1536_1152.webp', description: "Windy Beach Oasis", home:h4)
+# p13 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/49ee3717d762ddc22fede71ffeef54da-uncropped_scaled_within_1536_1152.webp', description:  "Southern Escape", home:h5)
+# p14 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/8576940c1a13546b01a016aa7fbbf98f-uncropped_scaled_within_1536_1152.webp', description:  "Quiet City Front",home:h6)
+# p15 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/60df0bb2105a0f895c4b254b04fefd9e-uncropped_scaled_within_1536_1152.webp', description:  "Closed Off Terrace", home:h7)
+# p16 = Photo.create(image_url: 'https://photos.zillowstatic.com/fp/e41ae85d9f1a4f6620c45a8f4adf5a3f-uncropped_scaled_within_1536_1152.webp', description: "Wooden Bliss", home:h8)
 
 
 puts "Seeding offers..."

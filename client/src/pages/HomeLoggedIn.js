@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button, FormField, Error } from "../styles";
 import "../styles/HomeLoggedIn.css"
+// import HomeLoggedInPic from "../images/HomeLoggedInPic.jpg"
 
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
@@ -30,6 +31,10 @@ function HomeLoggedIn({ user, setUser }) {
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
   const handleEdit = (offerId) => {
@@ -100,7 +105,10 @@ function HomeLoggedIn({ user, setUser }) {
     <Wrapper>
       {user && (
         <div>
-          <h1>Welcome, {user.username.toUpperCase()}!</h1>
+          <div className="HomeLoggedcontainer">
+          <img className="HomeLogggedInImg" src="../images/HomeLoggedInPic.jpg" />
+          <h1 className="centered" >Welcome, {capitalizeFirstLetter(user.username)}</h1>
+          </div>
           <h2 className="O">Offers you have made: </h2>
             {user && user.offers && user.offers.length ? user.offers.map((offer, index) => {
               return (
@@ -142,7 +150,7 @@ function HomeLoggedIn({ user, setUser }) {
                         className="homeListListings"
                       />
                       <h2>{homewatch.home.address}</h2>
-                      <ul>By {homewatch.user.username.toUpperCase()}</ul>
+                      <ul>By {capitalizeFirstLetter(homewatch.user.username)}</ul>
                       <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
                       <div className= "ListingButton">
                     <Button as={Link} to={`/homes?id=${homewatch.home.id}`}>
@@ -164,12 +172,12 @@ function HomeLoggedIn({ user, setUser }) {
                 <Home key={home.id}>
                   <Box>
                     <img
-                      src={home.photos[0].image_url}
+                      src={home.photos.length > 0 && home.photos[0].image_url}
                       alt={home.bio}
                       className="homeListListings"
                     />
                     <h2>{home.address}</h2>
-                    <ul>By {home.user.username.toUpperCase()}</ul>
+                    <ul>By {capitalizeFirstLetter(home.user.username)}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
                     <div className= "ListingButton">
                   <Button as={Link} to={`/homes?id=${home.id}`}>

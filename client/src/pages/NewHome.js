@@ -12,6 +12,10 @@ function NewHome({ user, setUser }) {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -34,7 +38,7 @@ function NewHome({ user, setUser }) {
         r.json().then((data) => {
           if(user){
             setUser({ ...user, homes: [...user.homes, data] });
-            history.push("/");
+            history.push("/dashboard");
             setIsLoading(false);
           }
         });
@@ -100,7 +104,7 @@ function NewHome({ user, setUser }) {
         <p>
           <em>Asking: ${numberWithCommas(price)}</em>
           &nbsp;·&nbsp;
-          <cite>Listed by: {user.email}</cite>
+          <cite>Listed by: {capitalizeFirstLetter(user.username)}</cite>
         </p>
         <ReactMarkdown>{bio}</ReactMarkdown>
       </WrapperChild>
