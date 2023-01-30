@@ -98,13 +98,6 @@ function handleCreateHomewatch() {
             <h1>Being sold by: {home.user && capitalizeFirstLetter(home.user.username)}</h1>
             <ul></ul>
             <div buttons>
-            {/* <Button
-                    onClick={() => {
-                    handleCreateHomewatch();
-                }}
-                className ="watchButton" >
-                Add To Watchlist
-            </Button> */}
                 <Button variant="outline" onClick={() => setFormVisible(!formVisible)}>
                     {formVisible ? "Cancel" : "Place an Offer"}
                 </Button>
@@ -124,7 +117,7 @@ function handleCreateHomewatch() {
                 <ul></ul>
             </>
             )}
-             <h3>Gallery:</h3>
+            <h3>Gallery:</h3>
                 <ListingCarousel home={home} />
         </div>
     );

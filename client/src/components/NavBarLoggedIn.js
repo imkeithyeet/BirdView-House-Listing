@@ -8,8 +8,6 @@ import Footer from "../components/Footer";
 import "../styles/Footer.css";
 
 
-
-
 function NavBarLoggedIn({ user, setUser }) {
   const [navBar, setNavBar] = useState(false);
 
@@ -68,26 +66,6 @@ const Wrapper = styled.header`
   padding: 8px;
 `;
 
-const Logo = styled.h1`
-  font-family: Chunkfive, sans;
-  font-size: 3rem;
-  color: CadetBlue;
-  margin: 0;
-  line-height: 1;
-  text-shadow: 1px 1px 1px;
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-   top: 30px;  
-   left:0.4em;
-   border-radius: 50%;
-
-  a {
-    // color: inherit;
-    // text-decoration: none;
-    // position: relative;
-  }
-`;
 const Nav = styled.nav`
   display: flex;
   gap: 4px;

@@ -24,7 +24,7 @@ function HomeLoggedIn({ user, setUser }) {
     useEffect(() => {
       document.body.className = theme;
         }, [theme]);
-    
+
   useEffect(() => {
     if (user) {
         fetch("/users/" + user.id)

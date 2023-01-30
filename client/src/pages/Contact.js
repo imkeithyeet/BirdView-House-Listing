@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../styles/contact.css';
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/d7d78ef0-9ede-11ed-82c7-3d7607318e65"; // TODO - fill on the later step
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/d7d78ef0-9ede-11ed-82c7-3d7607318e65";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -21,7 +21,7 @@ const Contact = () => {
   }
 
   return (
-    <form 
+    <form
       action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
       method="POST"
@@ -29,10 +29,10 @@ const Contact = () => {
     >
         <div>
         <h1 className="H3">Contact Us</h1>
-     </div>
-     <div>
-     <p1>Send Us a Message Today:</p1>
-     </div>
+        </div>
+        <div>
+        <p1>Send Us a Message Today:</p1>
+        </div>
       <div className="name">
         <input type="text" placeholder="Your name" name="name" required />
       </div>
@@ -45,7 +45,7 @@ const Contact = () => {
       <div>
         <button type="submit"> Send a message </button>
       </div>
-     <p3 className= "P3"> By submitting your message and personal details you are permitting us to contact you by these means in response to your inquiry. </p3>
+      <p3 className= "P3"> By submitting your message and personal details you are permitting us to contact you by these means in response to your inquiry. </p3>
     </form>
   );
 };

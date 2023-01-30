@@ -27,7 +27,7 @@ function App() {
     setTheme('light');
     }
     };
-    
+
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
