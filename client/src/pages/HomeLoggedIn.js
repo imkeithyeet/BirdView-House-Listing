@@ -3,38 +3,36 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button, FormField, Error } from "../styles";
-import "../styles/HomeLoggedIn.css"
+import "../styles/HomeLoggedIn.css";
 import "../styles/DarkMode.css";
-
 
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState("");
   const [errors, setErrors] = useState([]);
   const [showForm, setShowForm] = useState({});
   const [homewatches, setHomewatches] = useState([]);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
-  if (theme === 'light') {
-    setTheme('dark');
+    if (theme === "light") {
+      setTheme("dark");
     } else {
-    setTheme('light');
+      setTheme("light");
     }
-    };
-    useEffect(() => {
-      document.body.className = theme;
-        }, [theme]);
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   useEffect(() => {
     if (user) {
-        fetch("/users/" + user.id)
-            .then((res) => res.json())
-            .then((data) => {
-                setUser(data);
-            });
+      fetch("/users/" + user.id)
+        .then((res) => res.json())
+        .then((data) => {
+          setUser(data);
+        });
     }
-}, []);
-
+  }, []);
 
   const handleChange = (event) => {
     setAmount(event.target.value);
@@ -50,36 +48,36 @@ function HomeLoggedIn({ user, setUser }) {
 
   const handleEdit = (offerId) => {
     fetch(`/offers/${offerId}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ amount })
+      body: JSON.stringify({ amount }),
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => console.error(error));
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
   };
 
   const handleDelete = (offerId) => {
     fetch(`/offers/${offerId}`, {
-      method: "DELETE"
+      method: "DELETE",
     })
-    .then((res) => {
-      if(res.ok){
-        setUser((prevState) => {
+      .then((res) => {
+        if (res.ok) {
+          setUser((prevState) => {
             return {
               ...prevState,
-            offers: prevState.offers.filter((offer) => offer.id !== offerId)
+              offers: prevState.offers.filter((offer) => offer.id !== offerId),
             };
-          })
-      }
-    })
-    .catch((error) => {
-    console.log(error);
-    });
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
@@ -113,42 +111,72 @@ function HomeLoggedIn({ user, setUser }) {
   }
 
   return (
-    
     <Wrapper>
       {user && (
         <div>
           <div className="HomeLoggedcontainer">
-          <img className="HomeLogggedInImg" src="../images/HomeLoggedInPic.jpg" />
-          <h1 className="centered" >Welcome, {capitalizeFirstLetter(user.username)}</h1>
+            <img
+              className="HomeLogggedInImg"
+              src="../images/HomeLoggedInPic.jpg"
+            />
+            <h1 className="centered">
+              Welcome, {capitalizeFirstLetter(user.username)}
+            </h1>
           </div>
           <h2 className="O">Offers you have made: </h2>
-            {user && user.offers && user.offers.length ? user.offers.map((offer, index) => {
+          {user && user.offers && user.offers.length ? (
+            user.offers.map((offer, index) => {
               return (
                 <div key={offer.id}>
                   <h3>{offer.home_address}</h3>
                   <h4>Asking: ${numberWithCommas(offer.home.price)}</h4>
                   <h4>Your offer: ${numberWithCommas(offer.amount)}</h4>
-                  <Button variant="outline" onClick={()=>setShowForm({...showForm, [index]: !showForm[index]})}>
-                {showForm[index] ? 'Cancel' : 'Edit Offer'}
-            </Button>
-            {showForm[index] && (
-              <form>
-                <input type="text" value={amount} onChange={handleChange} />
-                <Button variant="outline" onClick={() => handleEdit(offer.id)}>Edit Offer</Button>
-                <FormField>
-                    {errors.map((err) => (
-                        <Error key={err}>{err}</Error>
-                    ))}
-                </FormField>
-              </form>)}
-                  <Button variant="outline" onClick={() => handleDelete(offer.id)}>Delete offer</Button>
+                  <Button
+                    variant="outline"
+                    onClick={() =>
+                      setShowForm({ ...showForm, [index]: !showForm[index] })
+                    }
+                  >
+                    {showForm[index] ? "Cancel" : "Edit Offer"}
+                  </Button>
+                  {showForm[index] && (
+                    <form>
+                      <input
+                        type="text"
+                        value={amount}
+                        onChange={handleChange}
+                      />
+                      <Button
+                        variant="outline"
+                        onClick={() => handleEdit(offer.id)}
+                      >
+                        Edit Offer
+                      </Button>
+                      <FormField>
+                        {errors.map((err) => (
+                          <Error key={err}>{err}</Error>
+                        ))}
+                      </FormField>
+                    </form>
+                  )}
+                  <Button
+                    variant="outline"
+                    onClick={() => handleDelete(offer.id)}
+                  >
+                    Delete offer
+                  </Button>
                 </div>
-              )
-            }) : <p>You have no offers</p>}
+              );
+            })
+          ) : (
+            <p>You have no offers</p>
+          )}
           <h2>
             {`You have `}
             <Link to="/dashboard">{user.offer_count}</Link>
-            {user.offer_count === 1 ? ' offer on your Listings' : ' offers on your Listings'}
+            {user.offer_count === 1
+              ? " offer on your Listings"
+              : " offers on your Listings"}
           </h2>
           <h2>Your Watchlist:</h2>
           <Wrapper className="homelist-loggedin">
@@ -157,22 +185,33 @@ function HomeLoggedIn({ user, setUser }) {
                   <Home key={homewatch.home_id}>
                     <Box>
                       <img
-                        src={homewatch.home.photos[0].image_url}
+                        src={
+                          (homewatch.home.photos?.length > 0 &&
+                            homewatch.home.photos[0].image_url) ||
+                          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                        }
                         alt={homewatch.home.bio}
                         className="homeListListings"
                       />
                       <h2>{homewatch.home.address}</h2>
                       <ReactMarkdown>{homewatch.home.bio}</ReactMarkdown>
                       <div className="ListingButton">
-                      <div className="remove">
-                      <Button variant="outline" as={Link} to={`/homes?id=${homewatch.home.id}`}>
-                      View Full Listing
-                    </Button>
-                    <Button variant="outline" onClick={() => handleDeleteHomewatch(homewatch.id)}>
-                      Remove From My Watchlist
-                    </Button>
-                    </div>
-                    </div>
+                        <div className="remove">
+                          <Button
+                            variant="outline"
+                            as={Link}
+                            to={`/homes?id=${homewatch.home.id}`}
+                          >
+                            View Full Listing
+                          </Button>
+                          <Button
+                            variant="outline"
+                            onClick={() => handleDeleteHomewatch(homewatch.id)}
+                          >
+                            Remove From My Watchlist
+                          </Button>
+                        </div>
+                      </div>
                     </Box>
                   </Home>
                 ))
@@ -185,7 +224,10 @@ function HomeLoggedIn({ user, setUser }) {
                 <Home key={home.id}>
                   <Box>
                     <img
-                      src={home.photos.length > 0 && home.photos[0].image_url}
+                      src={
+                        (home.photos?.length > 0 && home.photos[0].image_url) ||
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                      }
                       alt={home.bio}
                       className="homeListListings"
                     />
@@ -194,10 +236,14 @@ function HomeLoggedIn({ user, setUser }) {
                     <ul className="money">${numberWithCommas(home.price)}</ul>
                     <ReactMarkdown>{home.bio}</ReactMarkdown>
                     <div className="ListingButton">
-                    <Button variant="outline" as={Link} to={`/homes?id=${home.id}`}>
-                    View Full Listing
-                  </Button>
-                  </div>
+                      <Button
+                        variant="outline"
+                        as={Link}
+                        to={`/homes?id=${home.id}`}
+                      >
+                        View Full Listing
+                      </Button>
+                    </div>
                   </Box>
                 </Home>
               ))
