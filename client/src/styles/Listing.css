@@ -1,30 +1,38 @@
 .ListingPic {
-    height: 500px;
-    width: relative;
-    text-align: center;
+  height: 500px;
+  width: relative;
+  text-align: center;
 }
 
 .listingCont2 {
-    height: 500px;
-    width: relative;
-    text-align: center;
+  height: 500px;
+  width: relative;
+  text-align: center;
 }
 
 .listingContainer {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .watchButton {
-    border: none;
-    padding: 5px;
-    font-size: 25px;
-    background-color: white;
-    cursor: pointer;
+  border: none;
+  padding: 5px;
+  font-size: 25px;
+  background-color: white;
+  cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.offer-button {
+  font-size: 40px;
+}
 
 .titlePlusButton {
-    text-align: center;
-
+  text-align: center;
 }

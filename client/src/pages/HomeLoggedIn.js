@@ -178,7 +178,7 @@ function HomeLoggedIn({ user, setUser }) {
               ? " offer on your Listings"
               : " offers on your Listings"}
           </h2>
-          <h2>Your Watchlist:</h2>
+          {homewatches.length > 0 ? <h2>Your Watchlist:</h2> : null}
           <Wrapper className="homelist-loggedin">
             {homewatches.length > 0
               ? homewatches.map((homewatch) => (

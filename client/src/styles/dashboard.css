@@ -1,31 +1,29 @@
-.H1{
-    position:relative;
-    text-align: center;
-    font: blue;
+.H1 {
+  position: relative;
+  text-align: center;
+  font: blue;
 }
-.H2{
-    position:relative;
-    text-align: center;
+.H2 {
+  position: relative;
+  text-align: center;
 }
-.h1{
-    position:relative;
-    text-align: left;
+.h1 {
+  position: relative;
+  text-align: left;
 }
 .homesForSale {
-    text-align: center;
+  text-align: center;
 }
-div{
-    position:relative;
-    text-align: center;
+div {
+  position: relative;
+  text-align: center;
 }
-dashListings{
-    color: rgb(61, 65, 87);
-
+dashListings {
+  color: rgb(61, 65, 87);
 }
-li{
-    color: rgb(61, 65, 87);
-    
+li {
+  color: rgb(61, 65, 87);
 }
-.offers{
-    color: rgb(61, 65, 87);
+.offers {
+  color: rgb(61, 65, 87);
 }
