@@ -5,26 +5,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Dashboard({ user, setUser }) {
-    const [showEmail, setShowEmail] = useState({});
     const [theme, setTheme] = useState('light');
     const toggleTheme = () => {
     if (theme === 'light') {
-      setTheme('dark');
-      } else {
-      setTheme('light');
-      }
-      };
-      useEffect(() => {
-        document.body.className = theme;
-          }, [theme]);
-      
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
+        setTheme('dark');
+        } else {
+        setTheme('light');
+        }
+        };
+        useEffect(() => {
+            document.body.className = theme;
+                }, [theme]);
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
 
     useEffect(() => {
         if (user) {
@@ -42,24 +34,19 @@ function Dashboard({ user, setUser }) {
             <div>
             {user && user.homes && user.homes.map((home) => (
             <div className="homesForSale" >
-                <Link to={`/user?id=${home.id}`}>
+                <Link to={`/listing?id=${home.id}`}>
                     <h3>{home.address}</h3>
                 </Link>
+                <h2>
+                    {`You have `}
+                    <Link to={`/listing?id=${home.id}`}>{home.offers.length}</Link>
+                    {home.offers.length === 1 ? ' offer on this home' : ' offers on this home'}
+                </h2>
                     <img
                     className="dashListings"
                     src={home.photos?.length > 0 && home.photos[0].image_url}
                     alt={home.bio}
                     />
-                {user && home.offers && home.offers.map((offer, index) => {
-                    return (
-                        <div className="offers">Offers:
-                            <li>${numberWithCommas(offer.amount)}</li>
-                            <li>Offered By: {offer.user? capitalizeFirstLetter(offer.user.username) : 'Not found'}</li>
-                            <button onClick={()=>setShowEmail({...showEmail, [index]: !showEmail[index]})}>Respond</button>
-                            {showEmail[index] ? <div>{offer.user.email}</div> : ""}
-                        </div>
-                    )
-                })}
                 </div>
             ))}
             </div>

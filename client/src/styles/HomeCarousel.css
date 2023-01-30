@@ -1,20 +1,20 @@
 .home-carousel{
     position: absolute;
-    top: -200px;
+    top: -130px;
     width:auto;
 
 }
 
 .words {
     position: absolute;
-    top: 49%;
+    top: 25%;
     left: 49%;
     transform: translate(-50%, -50%);
 }
 
 .carousel-caption {
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 2px rgb(255, 255, 255);
+    color: rgb(61, 65, 87);
+    text-shadow: 1px 1px grey;
 }
 
 .carousel-image {

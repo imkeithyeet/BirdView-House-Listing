@@ -105,7 +105,7 @@ function handleCreateHomewatch() {
                 className ="watchButton" >
                 Add To Watchlist
             </Button> */}
-                <Button onClick={() => setFormVisible(!formVisible)}>
+                <Button variant="outline" onClick={() => setFormVisible(!formVisible)}>
                     {formVisible ? "Cancel" : "Place an Offer"}
                 </Button>
                 </div>
@@ -114,7 +114,7 @@ function handleCreateHomewatch() {
             <>
                 <form onSubmit={event => handleCreateOffer(event)}>
                     <input type="text" value={amount} placeholder="amount..." onChange={e => setAmount(e.target.value)} />
-                    <Button type="submit" onClick={onOffer} >Submit</Button>
+                    <Button variant="outline" type="submit" onClick={onOffer} >Submit</Button>
                     <FormField>
                         {errors.map((err) => (
                             <Error key={err}>{err}</Error>

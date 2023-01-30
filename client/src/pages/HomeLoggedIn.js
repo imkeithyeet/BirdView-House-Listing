@@ -150,7 +150,7 @@ function HomeLoggedIn({ user, setUser }) {
             <Link to="/dashboard">{user.offer_count}</Link>
             {user.offer_count === 1 ? ' offer on your Listings' : ' offers on your Listings'}
           </h2>
-          <h2>Your Personal Favorites:</h2>
+          <h2>Your Watchlist:</h2>
           <Wrapper className="homelist-loggedin">
             {homewatches.length > 0
               ? homewatches.map((homewatch) => (
@@ -169,7 +169,7 @@ function HomeLoggedIn({ user, setUser }) {
                       View Full Listing
                     </Button>
                     <Button variant="outline" onClick={() => handleDeleteHomewatch(homewatch.id)}>
-                      Remove From My Favorites
+                      Remove From My Watchlist
                     </Button>
                     </div>
                     </div>
