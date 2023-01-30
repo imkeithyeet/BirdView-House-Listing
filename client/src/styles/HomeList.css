@@ -1,6 +1,6 @@
 .homelist {
   position: relative;
-  top: 1100px;
+  top: 1200px;
   display: flex;
   overflow-x: auto;
   left: 0;
@@ -20,10 +20,11 @@
   height: 490px;
   width: absolute;
   position: sticky;
+  top: 50px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
 
 p {
@@ -91,6 +92,8 @@ p4 {
 
 }
 h1{
+  font-size: 32px;
+
   color: rgb(61, 65, 87);
 
 }
