@@ -28,9 +28,9 @@ h1 = Home.create( address: "594 S Mapleton Dr, Los Angeles, CA 90024", price:150
 h2 = Home.create( address: "2571 Wallingford Dr, Beverly Hills, CA 90210", price:850000, bio:"Quiet suburban home with much greenery and neat walkway", user:u2)
 h3 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:6000000, bio:"Suburban mansion that encapsulates the wealth and view of Paradise Valley", user:u3)
 h4 = Home.create( address: "1820 West Lawn Ave, Madison, WI 53711", price:850000, bio:"Beach front house in Wisconsin with breathtaking views and clean air ", user:u4)
-h5 = Home.create( address: "679 County Road 1465, Bonham, TX 75418", price:700000, bio:"Southern style suburban forest environment", user:u5)
+h5 = Home.create( address: "679 County Road 1465, Bonham, TX 75418", price:700000, bio:"Exquisite breathtaking architecture with sharp personality ", user:u5)
 h6 = Home.create( address: "824 Mountain Ave, Wyckoff, NJ 07481", price:900000, bio:"Small Secluded house with modern design in a rural environment  ", user:u6)
-h7 = Home.create( address: "679 County Road 1465, Bonham, TX 75418", price:700000, bio:"Southern style suburban forest environment", user:u7)
+h7 = Home.create( address: "679 County Road 1465, Bonham, TX 75418", price:700000, bio:"Modern", user:u7)
 h8 = Home.create( address: "7265 N 40th St, Paradise Valley, AZ 85253", price:600000, bio:"Suburban mansion that encapsulates the wealth and view of Paradise Valleye", user:u8)
 
 

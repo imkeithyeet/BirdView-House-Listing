@@ -46,7 +46,7 @@ function App() {
       <div className="content-wrap">
         <NavBar />
         <main>
-        <Button variant="outline" className="contactDark" onClick={toggleTheme}>{theme == 'light' ? '🔆' : '🌙'}</Button>
+        <Button variant="outline" className="contactDark" onClick={toggleTheme}>{theme === 'light' ? '𖤓' : '☽'}</Button>
           <Switch>
             <Route path="/about">
               <About />
@@ -75,7 +75,7 @@ function App() {
     <>
       <NavBarLoggedIn user={user} setUser={setUser} />
       <main>
-      <Button variant="outline" className="contactDark2" onClick={toggleTheme}>{theme == 'light' ? '🔆' : '🌙'}</Button>
+      <Button variant="outline" className="contactDark2" onClick={toggleTheme}>{theme == 'light' ? '𖤓' : '☽'}</Button>
         <Switch>
           <Route path="/dashboard">
             <Dashboard user={user} setUser={setUser} />
