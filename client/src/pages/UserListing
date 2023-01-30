@@ -1,0 +1,39 @@
+import { useEffect, useState } from "react";
+import "../styles/Listing.css"
+import { useHistory } from "react-router-dom";
+import ListingCarousel from "../components/ListingCarousel.js"
+
+function UserListing({ user, onOffer }) {
+    const [home, setHome] = useState([]);
+    const id = new URLSearchParams(window.location.search).get('id')
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    useEffect(() => {
+        fetch(`/homes/${id}`)
+        .then((r) => r.json())
+        .then(setHome);
+    }, []);
+
+    return (
+        <>
+            {home ? (
+            <>
+                <img
+                className="ListingPic"
+                src={home.photos?.length > 0 && home.photos[0].image_url}
+                />
+                <div>{home.address}</div>
+                <h1>Being sold by: {capitalizeFirstLetter(home.user.username)}</h1>
+                <ListingCarousel home={home} />
+            </>
+            ) : (
+            <div>Loading...</div>
+            )}
+        </>
+    );
+}
+
+export default UserListing;

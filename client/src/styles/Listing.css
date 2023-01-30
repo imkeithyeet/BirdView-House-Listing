@@ -1,4 +1,30 @@
 .ListingPic {
     height: 500px;
-    width: relative
+    width: relative;
+    text-align: center;
+}
+
+.listingCont2 {
+    height: 500px;
+    width: relative;
+    text-align: center;
+}
+
+.listingContainer {
+    position: relative;
+    text-align: center;
+}
+
+.watchButton {
+    border: none;
+    padding: 5px;
+    font-size: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.titlePlusButton {
+    text-align: center;
+
 }
