@@ -14,7 +14,8 @@
 
 .carousel-caption {
     color: rgb(61, 65, 87);
-    text-shadow: 1px 1px grey;
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    top: 209px;
 }
 
 .carousel-image {
