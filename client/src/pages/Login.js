@@ -12,8 +12,8 @@ function Login({ onLogin }) {
   return (
     <Wrapper>
       <div className="LoginPage">
-      <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
-      </Logo>
+        <Logo>{ showLogin ? "Login into your BirdView Profile" : "Signup for your BirdView Profile" }
+        </Logo>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
