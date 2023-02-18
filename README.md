@@ -1,9 +1,8 @@
-# Project Template: React/Rails API
+# Project: BirdView House Listing App
 
 ## Description
 
-This project is scaffolded so that you can build a React frontend and Rails
-backend together, and easily deploy them to Render.
+A house listing app that you can sign into your account and post your house for sale and also bid offers for other houses as well.
 
 **Note**: if you are not planning to deploy your app to Render and prefer to use
 SQLite, you will need to make the following changes in the project files:
