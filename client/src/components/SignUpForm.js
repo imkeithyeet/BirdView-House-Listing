@@ -43,6 +43,7 @@ function SignUpForm({ onLogin }) {
           id="username"
           autoComplete="off"
           value={username}
+          placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
         />
       </FormField>
@@ -53,6 +54,7 @@ function SignUpForm({ onLogin }) {
           id="email"
           autoComplete="off"
           value={email}
+          placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormField>
@@ -62,6 +64,7 @@ function SignUpForm({ onLogin }) {
           type="password"
           id="password"
           value={password}
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
         />
@@ -72,6 +75,7 @@ function SignUpForm({ onLogin }) {
           type="password"
           id="password_confirmation"
           value={passwordConfirmation}
+          placeholder="Password Confirmation"
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />

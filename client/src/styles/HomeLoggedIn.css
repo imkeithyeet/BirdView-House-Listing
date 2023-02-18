@@ -77,8 +77,9 @@ h2{
     display: flex;
     position: relative;
     height: 25em;
-    width: 50em;
+    width: 43em;
     border-radius:20px;
     border: 2px solid rgb(0, 0, 0);
+    /* left: -em; */
 
 }
