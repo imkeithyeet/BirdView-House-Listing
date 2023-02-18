@@ -108,6 +108,7 @@ function HomeLoggedIn({ user, setUser }) {
             <img
               className="HomeLoggedInImg"
               src="../images/HomeLoggedInPic.jpg"
+              alt="Home"
             />
             <h1 className="centered">
               Welcome, {user.username && capitalizeFirstLetter(user.username)}

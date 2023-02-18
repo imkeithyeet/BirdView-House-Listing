@@ -9,14 +9,8 @@ const COLORS = {
   secondary: {
     "--main": "white",
     "--accent": "white",
+  },
 
-    "--main": "black",
-    "--accent": "white",
-  },
-  secondary: {
-    "--main": "rgba(177,164,174,1)",
-    "--accent": "rgba(40,40,55,1)",
-  },
 };
 
 function Button({ variant = "fill", color = "primary", ...props }) {

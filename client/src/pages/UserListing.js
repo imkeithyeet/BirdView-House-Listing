@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Listing.css"
-import { Button, FormField, Error, Label, Input } from "../styles";
+import { Button, FormField, Error, Input } from "../styles";
 import { useHistory } from "react-router-dom";
 
 function UserListing({ user, setUser }) {
@@ -10,7 +10,7 @@ function UserListing({ user, setUser }) {
     const [errors, setErrors] = useState([]);
     const [imageUrl, setImageUrl] = useState('');
     const [description, setDescription] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [ setIsLoading] = useState(false);
     const history = useHistory();
     const id = new URLSearchParams(window.location.search).get('id')
 

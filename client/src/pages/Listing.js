@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Listing.css";
-import { Error, FormField, Button, Label, Input } from "../styles";
+import { Error, FormField, Button } from "../styles";
 import { useHistory } from "react-router-dom";
 import ListingCarousel from "../components/ListingCarousel.js";
 import { Link } from "react-router-dom";
@@ -65,6 +65,7 @@ function Listing({ user, onOffer }) {
             <h1>{home && home.address}</h1>
             <img
             className="ListingPic"
+            alt="ListingPic"
             src={
                 (home.photos?.length > 0 && home.photos[0].image_url) ||
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
@@ -89,6 +90,7 @@ function Listing({ user, onOffer }) {
         <div className="listingCont2">
             <img
             className="ListingPic"
+            alt="ListingPic"
             src={
                 (home.photos?.length > 0 && home.photos[0].image_url) ||
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"

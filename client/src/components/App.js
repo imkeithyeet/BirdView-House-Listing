@@ -20,7 +20,7 @@ function App() {
   const [showSun, setShowSun] = useState(true);
   const [theme, setTheme] = useState('light');
   const toggleTheme = () => {
-    setShowSun()
+    setShowSun(showSun)
   if (theme === 'light') {
     setTheme('dark');
     } else {
