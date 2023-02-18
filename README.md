@@ -1,4 +1,4 @@
-# Project :BirdView House Listing App
+# Project: BirdView House Listing App
 
 ## Description
 
