@@ -9,20 +9,10 @@ import "../styles/DarkMode.css";
 function HomeLoggedIn({ user, setUser }) {
   const [homes, setHomes] = useState([]);
   const [amount, setAmount] = useState("");
-  const [errors, setErrors] = useState([]);
+  const [errors] = useState([]);
   const [showForm, setShowForm] = useState({});
   const [homewatches, setHomewatches] = useState([]);
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+
 
   useEffect(() => {
     if (user) {
@@ -116,7 +106,7 @@ function HomeLoggedIn({ user, setUser }) {
         <div>
           <div className="HomeLoggedcontainer">
             <img
-              className="HomeLogggedInImg"
+              className="HomeLoggedInImg"
               src="../images/HomeLoggedInPic.jpg"
             />
             <h1 className="centered">

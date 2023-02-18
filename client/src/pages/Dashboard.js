@@ -1,21 +1,11 @@
 import NewHome from "./NewHome";
 import "../styles/dashboard.css";
 import "../styles/DarkMode.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Dashboard({ user, setUser }) {
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+
 
   useEffect(() => {
     if (user) {
@@ -34,7 +24,7 @@ function Dashboard({ user, setUser }) {
             {user &&
             user.homes &&
             user.homes.map((home) => (
-                <div className="homesForSale">
+                <div className="homesForSale" key={home.id}>
                 <Link to={`/listing?id=${home.id}`}>
                     <h3>{home.address}</h3>
                 </Link>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label, Textarea } from "../styles";
+import { Button, Error, Input, FormField, Label } from "../styles";
 
 function SignUpForm({ onLogin }) {
   const [email, setEmail] = useState("");

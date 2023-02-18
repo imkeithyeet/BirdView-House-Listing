@@ -31,7 +31,7 @@ const Contact = () => {
         <h1 className="H3">Contact Us</h1>
         </div>
         <div>
-        <p1>Send Us a Message Today:</p1>
+        <p>Send Us a Message Today:</p>
         </div>
       <div className="name">
         <input type="text" placeholder="Your name" name="name" required />
@@ -45,7 +45,7 @@ const Contact = () => {
       <div>
         <button type="submit"> Send a message </button>
       </div>
-      <p3 className= "P3"> By submitting your message and personal details you are permitting us to contact you by these means in response to your inquiry. </p3>
+      <p className= "P3"> By submitting your message and personal details you are permitting us to contact you by these means in response to your inquiry. </p>
     </form>
   );
 };
